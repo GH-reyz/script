@@ -5,7 +5,7 @@ green='\e[0;32m'
 NC='\e[0m'
 echo -e ""
 echo -e " ═════════════════════════════════════════"
-echo -e "          ${green}SHADOWSOCKS R${NC}     " 
+echo -e "          ${red}SHADOWSOCKS R${NC}     " 
 echo -e " ═════════════════════════════════════════"
 echo -e " " 
 echo -e "   [ 1 ]  CREATE NEW USER"
