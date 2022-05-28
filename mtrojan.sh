@@ -5,7 +5,7 @@ green='\e[0;32m'
 NC='\e[0m'
 echo -e ""
 echo -e "  ═══════════════════════════════════════════════" 
-echo -e "            ${green}TROJAN GFW${NC}                    " 
+echo -e "            ${red}TROJAN GFW${NC}                    " 
 echo -e "  ═══════════════════════════════════════════════" 
 echo -e "  " 
 echo -e "   [ 1 ] CREATE NEW USER"
