@@ -4,6 +4,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 blue='\e[0;34m'
 blue_b='\e[0;94m'
+purple='\e[1;35m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com);
 IZIN=$(curl https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $MYIP | awk '{print $4}')
