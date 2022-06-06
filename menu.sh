@@ -46,7 +46,6 @@ echo -e  " ${red}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
 echo -e  " ${red}CLIENT NAME                 : $name${NC}"
 echo -e  " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e  " ${red}CONTACT TELEGRAM            : @GHReyz" 
-echo -e  " "
 echo -e  " $═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e  "                          • MAIN MENU • " | lolcat                                       
 echo -e  " $═════════════════════════════════════════════════════════════════ " | lolcat
@@ -57,7 +56,6 @@ echo -e  " ${red}[  4 ] SHADOWSOCKS OBFS"
 echo -e  " ${red}[  5 ] V2RAY CORE" 
 echo -e  " ${red}[  6 ] XRAY CORE" 
 echo -e  " ${red}[  7 ] TROJAN GFW" 
-echo -e  " " 
 echo -e  " $═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e  "                         • SYSTEM MENU • " | lolcat     
 echo -e  " $═════════════════════════════════════════════════════════════════ " | lolcat                          
@@ -74,7 +72,6 @@ echo -e  " [ 17 ] CHECK STREAM GEO LOCATION"
 echo -e  " [ 18 ] CHECK SERVICE ERROR"
 echo -e  " [ 19 ] UPDATE SCRIPT"
 echo -e  " [  0 ] EXIT MENU${NC} "
-echo -e  " "
 echo -e  " $═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e  "  Premium Script By Reyz-V4" | lolcat
 echo -e  "  Thank You For Using Script By Reyz-V4" | lolcat
