@@ -24,10 +24,10 @@ echo -e  "${blue_b}  __| ".        |\dS"qML "
 echo -e  "${blue_b}  |    `.       | `' \Zq "
 echo -e  "${blue_b}  _)      \.___.,|     .' "
 echo -e  "${blue_b}  \____   )MMMMMM|   .' "
-echo -e  "${blue_b}      `-'       `--' Premium "
+echo -e  "${blue_b}      `-'       `--' Premium Script "
 
 echo -e  ""
-echo -e  "${purple}JANGAN CAKAP ABANG TAK PAYUNG ! ERROR ? CONTACT TELEGRAM @GHReyz"
+echo -e  "${red}JANGAN CAKAP ABANG TAK PAYUNG ! ERROR ? CONTACT TELEGRAM @GHReyz"
 echo -e  ""
 echo -e  "${red}TYPE 'menu' TO GO TO MAIN OR 'exit' TO LOGOUT"${NC}
 echo -e  ""
