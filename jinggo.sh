@@ -11,7 +11,22 @@ NC='\e[0m'
 echo -e  "${blue_b}      ░█▀▀█ ░█▀▀▀ ░█──░█ ░█▀▀▀█ ── ░█──░█ ─█▀█─      "${NC}      
 echo -e  "${blue_b}      ░█▄▄▀ ░█▀▀▀ ░█▄▄▄█ ─▄▄▄▀▀ ▀▀ ─░█░█─ █▄▄█▄        "${NC}
 echo -e  "${blue_b}      ░█─░█ ░█▄▄▄ ──░█── ░█▄▄▄█ ── ──▀▄▀─ ───█─          "${NC}
-echo -e  ""
+echo -e  "${blue_b}        _nnnn_ "                    
+echo -e  "${blue_b}       dGGGGMMb     ,""""""""""""""."
+echo -e  "${blue_b}      @p~qp~~qMb    |   WELCOME !  | "
+echo -e  "${blue_b}      M|@||@) M|   _;..............' "
+echo -e  "${blue_b}      @,----.JM| -' "
+echo -e  "${blue_b}     JS^\__/  qKL "
+echo -e  "${blue_b}   dZP        qKRb "
+echo -e  "${blue_b}   dZP          qKKb "
+echo -e  "${blue_b}  fZP            SMMb "
+echo -e  "${blue_b}  HZM            MMMM "
+echo -e  "${blue_b}  FqM            MMMM "
+echo -e  "${blue_b}  __| ".        |\dS"qML "
+echo -e  "${blue_b}  |    `.       | `' \Zq "
+echo -e  "${blue_b}  _)      \.___.,|     .' "
+echo -e  "${blue_b}  \____   )MMMMMM|   .' "
+echo -e  "${blue_b}      `-'       `--' Ptemium "
 echo -e  "${blue_b}         ░█▀▀▀█ ░█▀▀█ ░█▀▀█ ▀█▀ ░█▀▀█ ▀▀█▀▀           "${NC}            
 echo -e  "${blue_b}         ─▀▀▀▄▄ ░█─── ░█▄▄▀ ░█─ ░█▄▄█ ─░█──             "${NC}
 echo -e  "${blue_b}         ░█▄▄▄█ ░█▄▄█ ░█─░█ ▄█▄ ░█─── ─░█──              "${NC}
