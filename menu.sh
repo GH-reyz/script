@@ -50,7 +50,7 @@ echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${red}CONTACT TELEGRAM            : @GHReyz"
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "  TOTAL USER          SSH/OVPN          XRAY          V2RAY          " | lolcat
-echo -e "                        $total_ssh               $total_xray              $total_v2ray             " 
+echo -e "                         $total_ssh               $total_xray              $total_v2ray             " 
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "                          • MAIN MENU • " | lolcat
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
