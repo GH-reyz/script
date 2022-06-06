@@ -8,9 +8,7 @@ blue_b='\e[0;94m'
 NC='\e[0m'
 
 
-echo -e  "${blue_b}      ░█▀▀█ ░█▀▀▀ ░█──░█ ░█▀▀▀█ ── ░█──░█ ─█▀█─      "${NC}      
-echo -e  "${blue_b}      ░█▄▄▀ ░█▀▀▀ ░█▄▄▄█ ─▄▄▄▀▀ ▀▀ ─░█░█─ █▄▄█▄        "${NC}
-echo -e  "${blue_b}      ░█─░█ ░█▄▄▄ ──░█── ░█▄▄▄█ ── ──▀▄▀─ ───█─          "${NC}
+echo -e  " "
 echo -e  "${blue_b}        _nnnn_ "                    
 echo -e  "${blue_b}       dGGGGMMb     ,""""""""""""""."
 echo -e  "${blue_b}      @p~qp~~qMb    |   WELCOME !  | "
