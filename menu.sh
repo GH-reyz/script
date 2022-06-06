@@ -34,7 +34,6 @@ total_v2ray=$(($c_vmess + $c_vless))
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 
 bash /root/.fontsam/banner
-echo -e " "
 echo -e " $ Premium Script" | lolcat
 echo -e " $═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "                       • SERVER INFORMATION •" | lolcat
@@ -50,8 +49,8 @@ echo -e " ${red}CLIENT NAME                 : $name${NC}"
 echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${red}CONTACT TELEGRAM            : @GHReyz"
 echo -e " $═════════════════════════════════════════════════════════════════ " | lolcat
-echo -e " TOTAL USER          SSH/OVPN          XRAY          V2RAY          " | lolcat
-echo -e "                        $total_ssh               $total_xray              $total_v2ray             " | lolcat
+echo -e " ${red}TOTAL USER          SSH/OVPN          XRAY          V2RAY          " 
+echo -e "                        $total_ssh               $total_xray              $total_v2ray             " 
 echo -e " $═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "                          • MAIN MENU • " | lolcat
 echo -e " $═════════════════════════════════════════════════════════════════ " | lolcat
