@@ -49,7 +49,6 @@ echo -e " ${red}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
 echo -e " ${red}CLIENT NAME                 : $name${NC}"
 echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${red}CONTACT TELEGRAM            : @GHReyz"
-echo -e " "
 echo -e " $═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e " TOTAL USER          SSH/OVPN          XRAY          V2RAY          " | lolcat
 echo -e "                        $total_ssh               $total_xray              $total_v2ray             " | lolcat
@@ -63,7 +62,6 @@ echo -e " ${red}[  4 ] SHADOWSOCKS OBFS"
 echo -e " ${red}[  5 ] V2RAY CORE"
 echo -e " ${red}[  6 ] XRAY CORE"
 echo -e " ${red}[  7 ] TROJAN GFW"
-echo -e " "
 echo -e " $═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "                         • SYSTEM MENU • " | lolcat
 echo -e " $═════════════════════════════════════════════════════════════════ " | lolcat
@@ -81,12 +79,10 @@ echo -e " [ 18 ] CHANGE SCRIPT BANNER"
 echo -e " [ 19 ] CHECK SERVICE ERROR"
 echo -e " [ 20 ] UPDATE SCRIPT"
 echo -e " [  0 ] EXIT MENU${NC} "
-echo -e " "
 echo -e " $═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "  Premium Script By Reyz-V4" | lolcat
 echo -e "  Thank You For Using Script By Reyz-V4" | lolcat
 echo -e " $═════════════════════════════════════════════════════════════════ " | lolcat
-echo -e "  "
 echo -e "\e[1;31m"
 read -p "     Please select an option :  " menu
 echo -e "\e[0m"
