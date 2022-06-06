@@ -34,10 +34,10 @@ total_v2ray=$(($c_vmess + $c_vless))
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 
 bash /root/.fontsam/banner
-echo -e " $ Premium Script" | lolcat
-echo -e "  ═════════════════════════════════════════════════════════════════ " | lolcat
+echo -e "  Premium Script" | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "                       • SERVER INFORMATION •" | lolcat
-echo -e "  ═════════════════════════════════════════════════════════════════ " | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e " ${red}VPS TYPE                    : PREMIUM"
 echo -e " ${red}IP VPS NUMBER               : $IPVPS${NC}"
 echo -e " ${red}DOMAIN                      : $DOMAIN${NC}"
@@ -48,12 +48,12 @@ echo -e " ${red}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
 echo -e " ${red}CLIENT NAME                 : $name${NC}"
 echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${red}CONTACT TELEGRAM            : @GHReyz"
-echo -e "  ═════════════════════════════════════════════════════════════════ " | lolcat
-echo -e " ${red}TOTAL USER          SSH/OVPN          XRAY          V2RAY          " 
+echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
+echo -e "  TOTAL USER          SSH/OVPN          XRAY          V2RAY          " | lolcat
 echo -e "                        $total_ssh               $total_xray              $total_v2ray             " 
-echo -e "  ═════════════════════════════════════════════════════════════════ " | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "                          • MAIN MENU • " | lolcat
-echo -e "  ═════════════════════════════════════════════════════════════════ " | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e " ${red}[  1 ] SSH & OPENVPN"
 echo -e " ${red}[  2 ] WIREGUARD"
 echo -e " ${red}[  3 ] SHADOWSOCKS R"
@@ -61,9 +61,9 @@ echo -e " ${red}[  4 ] SHADOWSOCKS OBFS"
 echo -e " ${red}[  5 ] V2RAY CORE"
 echo -e " ${red}[  6 ] XRAY CORE"
 echo -e " ${red}[  7 ] TROJAN GFW"
-echo -e "  ═════════════════════════════════════════════════════════════════ " | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "                         • SYSTEM MENU • " | lolcat
-echo -e "  ═════════════════════════════════════════════════════════════════ " | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e " ${red}[  8 ] ADD/CHANGE DOMAIN VPS"
 echo -e " [  9 ] CHANGE PORT SERVICE"
 echo -e " [ 10 ] CHANGE DNS SERVER"
@@ -78,10 +78,10 @@ echo -e " [ 18 ] CHANGE SCRIPT BANNER"
 echo -e " [ 19 ] CHECK SERVICE ERROR"
 echo -e " [ 20 ] UPDATE SCRIPT"
 echo -e " [  0 ] EXIT MENU${NC} "
-echo -e "  ═════════════════════════════════════════════════════════════════ " | lolcat
-echo -e "                     Premium Script By Reyz-V4" | lolcat
-echo -e "               Thank You For Using Script By Reyz-V4" | lolcat
-echo -e "  ═════════════════════════════════════════════════════════════════ " | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
+echo -e " Premium Script By Reyz-V4" | lolcat
+echo -e " Thank You For Using Script By Reyz-V4" | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "  "
 echo -e "\e[1;31m"
 read -p "     Please select an option :  " menu
