@@ -3,7 +3,7 @@ clear
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-
+bash /root/.fontsam/banner
 echo -e "${green}PANEL XRAY CORE${NC}" 
 echo -e "=========================================================================="
 echo -e "${red}XRAY VMESS${NC}"

@@ -171,6 +171,19 @@ rm -f /root/ins-vt.sh
 rm -f /root/install-xray.sh
 rm -f /root/ohp.sh
 
+apt install lolcat -y
+apt install figlet -y
+
+wget -q -O /usr/bin/banner_changer "https://raw.githubusercontent.com/GH-reyz/script/main/banner_changer.sh" && chmod +x /usr/bin/banner_changer
+[[ ! -d /root/.fontsam ]] && {
+    mkdir /root/.fontsam
+    touch /root/.fontsam/fontlist
+    touch /root/.fontsam/count
+    curl -Ss https://raw.githubusercontent.com/syfqsamvpn/font/main/list >/root/.fontsam/fontlist
+    echo "figlet -f slant Reyz-V4 -c | lolcat" >/root/.fontsam/banner
+    echo "Reyz-V4" >/root/.fontsam/bannername
+}
+
 #install resolv
 apt install resolvconf
 systemctl start resolvconf.service
