@@ -5,7 +5,7 @@ green='\e[0;32m'
 NC='\e[0m'
 
 echo -e ""
-echo ""
+bash /root/.fontsam/banner
 echo -e " ═════════════════════════════════════════════" 
 echo -e "             ${red}XRAY VLESS GRPC${NC}                     "   
 echo -e " ═════════════════════════════════════════════" 

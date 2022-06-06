@@ -3,7 +3,7 @@ clear
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-echo -e ""
+bash /root/.fontsam/banner
 echo -e " ═════════════════════════════════════════"
 echo -e "          ${red}SHADOWSOCKS R${NC}     " 
 echo -e " ═════════════════════════════════════════"
