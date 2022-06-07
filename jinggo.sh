@@ -8,9 +8,9 @@ blue_b='\e[0;94m'
 NC='\e[0m'
 
 
-echo -e  "${blue_b}   ░█▀▀█ ░█▀▀▀ ░█──░█ ░█▀▀▀█ ── ░█──░█ ─█▀█─      "${NC}      
-echo -e  "${blue_b}   ░█▄▄▀ ░█▀▀▀ ░█▄▄▄█ ─▄▄▄▀▀ ▀▀ ─░█░█─ █▄▄█▄        "${NC}
-echo -e  "${blue_b}   ░█─░█ ░█▄▄▄ ──░█── ░█▄▄▄█ ── ──▀▄▀─ ───█─          "${NC}
+echo -e  "${blue_b}  ░█▀▀█ ░█▀▀▀ ░█──░█ ░█▀▀▀█ ── ░█──░█ ─█▀█─      "${NC}      
+echo -e  "${blue_b}  ░█▄▄▀ ░█▀▀▀ ░█▄▄▄█ ─▄▄▄▀▀ ▀▀ ─░█░█─ █▄▄█▄        "${NC}
+echo -e  "${blue_b}  ░█─░█ ░█▄▄▄ ──░█── ░█▄▄▄█ ── ──▀▄▀─ ───█─          "${NC}
 echo -e  "${red}  ⠀⠀⠀    ⠀ ⠀⠀ ⢀⣴⣾⣿⣿⣷⣶⣦⣄⠀⠀ ⠀⠀ "${NC}⠀⠀⠀⠀⠀
 echo -e  "${red}⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀   "${NC}⠀⠀⠀⠀⠀⠀
 echo -e  "${red}⠀   ⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄    ⠀"${NC}⠀⠀⠀⠀⠀
@@ -36,6 +36,6 @@ echo -e  "${blue_b}    ░█▄▄▄█ ░█▄▄█ ░█─░█ ▄█
 echo -e  ""
 echo -e  " JANGAN CAKAP ABANG TAK PAYUNG ! ERROR ? CONTACT TELEGRAM @GHReyz" | lolcat
 echo -e  ""
-echo -e  "${red}TYPE 'menu' TO GO TO MAIN OR 'exit' TO LOGOUT"${NC}
+echo -e  " TYPE 'menu' TO GO TO MAIN OR 'exit' TO LOGOUT" | lolcat
 echo -e  ""
 
