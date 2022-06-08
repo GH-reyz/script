@@ -70,7 +70,6 @@ echo -e " ${red}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
 echo -e " ${red}CLIENT NAME                 : $name${NC}"
 echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${red}CONTACT TELEGRAM            : @GHReyz"
-echo -e " "
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e " TRAFFIC           TODAY          YESTERDAY          MONTH          " | lolcat
 echo -e " UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv          $month_tx $month_txv          " | lolcat
@@ -86,7 +85,6 @@ echo -e " ${red}[  1 ] SSH & OPENVPN                  [  2 ] WIREGUARD"
 echo -e " ${red}[  3 ] SHADOWSOCKS R                  [  4 ] SHADOWSOCKS OBFS"
 echo -e " ${red}[  5 ] V2RAY CORE                     [  6 ] XRAY CORE"
 echo -e " ${red}[  7 ] TROJAN GFW"
-echo -e " "
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "                         • SYSTEM MENU • " | lolcat
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
@@ -97,7 +95,6 @@ echo -e " [ 14 ] REBOOT VPS                     [ 15 ] SPEEDTEST VPS"
 echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
 echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
 echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
-echo -e " "
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "  Premium Script By Reyz-V4" | lolcat
 echo -e "  Thank You For Using Script By Reyz-V4" | lolcat
