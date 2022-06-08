@@ -54,7 +54,6 @@ yesterday_rxv=$(grep yesterday t1 | awk '{print $3}')
 yesterday_tx=$(grep yesterday t1 | awk '{print $5}')
 yesterday_txv=$(grep yesterday t1 | awk '{print $6}')
 bash /root/.fontsam/banner
-echo -e " "
 echo -e " ${red} Premium Script"
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "                       • SERVER INFORMATION •" | lolcat
