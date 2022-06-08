@@ -19,6 +19,7 @@ fi
 echo -e " "
 IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
+city=$(curl -s https://ipinfo.io/json | grep -o 'city": "[^"]*' | grep -o '[^"]*$')
 cekxray="$(openssl x509 -dates -noout </etc/v2ray/v2ray.crt)"
 expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
 name=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $2}')
@@ -32,15 +33,36 @@ c_vless=$(grep -oc '### [^ ]*' /etc/v2ray/vless.json | cut -d' ' -f2)
 total_xray=$(($c_xtls + $c_xvmess + $c_xvless + $c_grpc))
 total_v2ray=$(($c_vmess + $c_vless))
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
-
+vnstat -i eth0 >/root/t1
+bulan=$(date +%b)
+month=$(grep "$bulan " t1 | awk '{print $9}')
+month_v=$(grep "$bulan " t1 | awk '{print $10}')
+month_rx=$(grep "$bulan " t1 | awk '{print $3}')
+month_rxv=$(grep "$bulan " t1 | awk '{print $4}')
+month_tx=$(grep "$bulan " t1 | awk '{print $6}')
+month_txv=$(grep "$bulan " t1 | awk '{print $7}')
+today=$(grep today t1 | awk '{print $8}')
+today_v=$(grep today t1 | awk '{print $9}')
+today_rx=$(grep today t1 | awk '{print $2}')
+today_rxv=$(grep today t1 | awk '{print $3}')
+today_tx=$(grep today t1 | awk '{print $5}')
+today_txv=$(grep today t1 | awk '{print $6}')
+yesterday=$(grep yesterday t1 | awk '{print $8}')
+yesterday_v=$(grep yesterday t1 | awk '{print $9}')
+yesterday_rx=$(grep yesterday t1 | awk '{print $2}')
+yesterday_rxv=$(grep yesterday t1 | awk '{print $3}')
+yesterday_tx=$(grep yesterday t1 | awk '{print $5}')
+yesterday_txv=$(grep yesterday t1 | awk '{print $6}')
 bash /root/.fontsam/banner
-echo -e "  Premium Script" | lolcat
+echo -e " "
+echo -e " ${red} Premium Script"
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "                       • SERVER INFORMATION •" | lolcat
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e " ${red}VPS TYPE                    : PREMIUM"
 echo -e " ${red}IP VPS NUMBER               : $IPVPS${NC}"
 echo -e " ${red}DOMAIN                      : $DOMAIN${NC}"
+echo -e " ${red}CITY                        : $city${NC}"
 echo -e " ${red}SCRIPT VERSION              : REYZ-V4 (V1)"
 echo -e " ${red}OS VERSION                  : $(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)"${NC}
 echo -e " ${red}KERNEL VERSION              : $(uname -r)${NC}"
@@ -48,41 +70,40 @@ echo -e " ${red}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
 echo -e " ${red}CLIENT NAME                 : $name${NC}"
 echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${red}CONTACT TELEGRAM            : @GHReyz"
+echo -e " "
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
-echo -e "  TOTAL USER          SSH/OVPN          XRAY          V2RAY          " | lolcat
-echo -e "                         $total_ssh               $total_xray              $total_v2ray             " 
+echo -e " TRAFFIC           TODAY          YESTERDAY          MONTH          " | lolcat
+echo -e " UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv          $month_tx $month_txv          " | lolcat
+echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv          $month_rx $month_rxv          " | lolcat
+echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v          $month $month_v          " | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
+echo -e " TOTAL USER          SSH/OVPN          XRAY          V2RAY          " | lolcat
+echo -e "                        $total_ssh               $total_xray              $total_v2ray             " | lolcat
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "                          • MAIN MENU • " | lolcat
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
-echo -e " ${red}[  1 ] SSH & OPENVPN"
-echo -e " ${red}[  2 ] WIREGUARD"
-echo -e " ${red}[  3 ] SHADOWSOCKS R"
-echo -e " ${red}[  4 ] SHADOWSOCKS OBFS"
-echo -e " ${red}[  5 ] V2RAY CORE"
-echo -e " ${red}[  6 ] XRAY CORE"
+echo -e " ${red}[  1 ] SSH & OPENVPN              [  2 ] WIREGUARD"
+echo -e " ${red}[  3 ] SHADOWSOCKS R              [  4 ] SHADOWSOCKS OBFS"
+echo -e " ${red}[  5 ] V2RAY CORE                 [  6 ] XRAY CORE"
 echo -e " ${red}[  7 ] TROJAN GFW"
+echo -e " "
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "                         • SYSTEM MENU • " | lolcat
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
-echo -e " ${red}[  8 ] ADD/CHANGE DOMAIN VPS"
-echo -e " [  9 ] CHANGE PORT SERVICE"
-echo -e " [ 10 ] CHANGE DNS SERVER"
-echo -e " [ 11 ] RENEW V2RAY AND XRAY CERTIFICATION"
-echo -e " [ 12 ] WEBMIN MENU"
-echo -e " [ 13 ] CHECK RAM USAGE"
-echo -e " [ 14 ] REBOOT VPS"
-echo -e " [ 15 ] SPEEDTEST VPS"
-echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION"
-echo -e " [ 17 ] CHECK STREAM GEO LOCATION"
-echo -e " [ 18 ] CHANGE SCRIPT BANNER"
-echo -e " [ 19 ] CHECK SERVICE ERROR"
-echo -e " [ 20 ] UPDATE SCRIPT"
-echo -e " [  0 ] EXIT MENU${NC} "
+echo -e " ${red}[  8 ] ADD/CHANGE DOMAIN VPS          [  9 ] CHANGE PORT SERVICE"
+echo -e " [ 10 ] CHANGE DNS SERVER              [ 11 ] RENEW CERTIFICATION"
+echo -e " [ 12 ] WEBMIN MENU                    [ 13 ] CHECK RAM USAGE"
+echo -e " [ 14 ] REBOOT VPS                     [ 15 ] SPEEDTEST VPS"
+echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
+echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
+echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
+echo -e " "
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
-echo -e " Premium Script By Reyz-V4" | lolcat
-echo -e " Thank You For Using Script By Reyz-V4" | lolcat
+echo -e "  Premium Script By Reyz-V4" | lolcat
+echo -e "  Thank You For Using Script By Reyz-V4" | lolcat
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "  "
+rm -f /root/t1
 echo -e "\e[1;31m"
 read -p "     Please select an option :  " menu
 echo -e "\e[0m"
