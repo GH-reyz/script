@@ -97,7 +97,7 @@ echo -e " UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_t
 echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" 
 echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v" 
 echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
-echo -e " TOTAL USER        SSH/OVPN          XRAY            V2RAY" 
+echo -e " TOTAL USER        SSH/OVPN          XRAY            V2RAY" | lolcat
 echo -e "                      $total_ssh               $total_xray                $total_v2ray" 
 echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
 echo -e "                          • MAIN MENU •" | lolcat
