@@ -77,9 +77,9 @@ rm -f /root/t1
 bash /root/.fontsam/banner
 echo -e " "
 echo -e " ${red} Premium Script"
-echo -e " ═════════════════════════════════════════════════════════════════                                               " | lolcat
-echo -e "                       • SERVER INFORMATION •                                                                    " | lolcat
-echo -e " ═════════════════════════════════════════════════════════════════                                               " | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
+echo -e "                       • SERVER INFORMATION •" | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
 echo -e " ${red}VPS TYPE                    : PREMIUM"
 echo -e " ${red}IP VPS NUMBER               : $IPVPS${NC}"
 echo -e " ${red}DOMAIN                      : $DOMAIN${NC}"
@@ -91,24 +91,24 @@ echo -e " ${red}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
 echo -e " ${red}CLIENT NAME                 : $name${NC}"
 echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${red}CONTACT TELEGRAM            : @GHReyz"
-echo -e " ═════════════════════════════════════════════════════════════════                                               " | lolcat
-echo -e " TRAFFIC           TODAY          YESTERDAY          MONTH                                                       " | lolcat
-echo -e " UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv           " | lolcat
-echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv           " | lolcat
-echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v                          " | lolcat
-echo -e " ═════════════════════════════════════════════════════════════════                                               " | lolcat
-echo -e " TOTAL USER        SSH/OVPN          XRAY            V2RAY                                                       " | lolcat
-echo -e "                      $total_ssh               $total_xray                $total_v2ray                           " | lolcat
-echo -e " ═════════════════════════════════════════════════════════════════                                               " | lolcat
-echo -e "                          • MAIN MENU •                                                                          " | lolcat
-echo -e " ═════════════════════════════════════════════════════════════════                                               " | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
+echo -e " TRAFFIC           TODAY          YESTERDAY          MONTH" | lolcat
+echo -e " UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv" | lolcat
+echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" | lolcat
+echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v" | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
+echo -e " TOTAL USER        SSH/OVPN          XRAY            V2RAY" | lolcat
+echo -e "                      $total_ssh               $total_xray                $total_v2ray" | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
+echo -e "                          • MAIN MENU •" | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
 echo -e " ${red}[  1 ] SSH & OPENVPN                  [  2 ] WIREGUARD"
 echo -e " ${red}[  3 ] SHADOWSOCKS R                  [  4 ] SHADOWSOCKS OBFS"
 echo -e " ${red}[  5 ] V2RAY CORE                     [  6 ] XRAY CORE"
 echo -e " ${red}[  7 ] TROJAN GFW"
-echo -e " ═════════════════════════════════════════════════════════════════                                               " | lolcat
-echo -e "                         • SYSTEM MENU •                                                                         " | lolcat
-echo -e " ═════════════════════════════════════════════════════════════════                                               " | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
+echo -e "                         • SYSTEM MENU •" | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
 echo -e " ${red}[  8 ] ADD/CHANGE DOMAIN VPS          [  9 ] CHANGE PORT SERVICE"
 echo -e " [ 10 ] CHANGE DNS SERVER              [ 11 ] RENEW CERTIFICATION"
 echo -e " [ 12 ] WEBMIN MENU                    [ 13 ] CHECK RAM USAGE"
@@ -116,10 +116,10 @@ echo -e " [ 14 ] REBOOT VPS                     [ 15 ] SPEEDTEST VPS"
 echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
 echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
 echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
-echo -e " ═════════════════════════════════════════════════════════════════                                               " | lolcat
-echo -e "  Premium Script By Reyz-V4                                                                                      " | lolcat
-echo -e "  Thank You For Using Script By Reyz-V4                                                                          " | lolcat
-echo -e " ═════════════════════════════════════════════════════════════════                                               " | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
+echo -e "  Premium Script By Reyz-V4" | lolcat
+echo -e "  Thank You For Using Script By Reyz-V4" | lolcat
+echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
 echo -e "  "
 echo -e "\e[1;31m"
 read -p "     Please select an option :  " menu
