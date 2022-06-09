@@ -35,25 +35,47 @@ total_v2ray=$(($c_vmess + $c_vless))
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 vnstat -i eth0 >/root/t1
 bulan=$(date +%b)
-month=$(grep "$bulan " t1 | awk '{print $9}')
-month_v=$(grep "$bulan " t1 | awk '{print $10}')
-month_rx=$(grep "$bulan " t1 | awk '{print $3}')
-month_rxv=$(grep "$bulan " t1 | awk '{print $4}')
-month_tx=$(grep "$bulan " t1 | awk '{print $6}')
-month_txv=$(grep "$bulan " t1 | awk '{print $7}')
-today=$(grep today t1 | awk '{print $8}')
-today_v=$(grep today t1 | awk '{print $9}')
-today_rx=$(grep today t1 | awk '{print $2}')
-today_rxv=$(grep today t1 | awk '{print $3}')
-today_tx=$(grep today t1 | awk '{print $5}')
-today_txv=$(grep today t1 | awk '{print $6}')
-yesterday=$(grep yesterday t1 | awk '{print $8}')
-yesterday_v=$(grep yesterday t1 | awk '{print $9}')
-yesterday_rx=$(grep yesterday t1 | awk '{print $2}')
-yesterday_rxv=$(grep yesterday t1 | awk '{print $3}')
-yesterday_tx=$(grep yesterday t1 | awk '{print $5}')
-yesterday_txv=$(grep yesterday t1 | awk '{print $6}')
+today=$(vnstat -i eth0 | grep today | awk '{print $8}')
+today_v=$(vnstat -i eth0 | grep today | awk '{print $9}')
+today_rx=$(vnstat -i eth0 | grep today | awk '{print $2}')
+today_rxv=$(vnstat -i eth0 | grep today | awk '{print $3}')
+today_tx=$(vnstat -i eth0 | grep today | awk '{print $5}')
+today_txv=$(vnstat -i eth0 | grep today | awk '{print $6}')
+if [ "$(grep -wc ${bulan} /root/t1)" != '0' ]; then
+  bulan=$(date +%b)
+  month=$(vnstat -i eth0 | grep "$bulan " | awk '{print $9}')
+  month_v=$(vnstat -i eth0 | grep "$bulan " | awk '{print $10}')
+  month_rx=$(vnstat -i eth0 | grep "$bulan " | awk '{print $3}')
+  month_rxv=$(vnstat -i eth0 | grep "$bulan " | awk '{print $4}')
+  month_tx=$(vnstat -i eth0 | grep "$bulan " | awk '{print $6}')
+  month_txv=$(vnstat -i eth0 | grep "$bulan " | awk '{print $7}')
+else
+  bulan=$(date +%Y-%m)
+  month=$(vnstat -i eth0 | grep "$bulan " | awk '{print $8}')
+  month_v=$(vnstat -i eth0 | grep "$bulan " | awk '{print $9}')
+  month_rx=$(vnstat -i eth0 | grep "$bulan " | awk '{print $2}')
+  month_rxv=$(vnstat -i eth0 | grep "$bulan " | awk '{print $3}')
+  month_tx=$(vnstat -i eth0 | grep "$bulan " | awk '{print $5}')
+  month_txv=$(vnstat -i eth0 | grep "$bulan " | awk '{print $6}')
+fi
+if [ "$(grep -wc yesterday /root/t1)" != '0' ]; then
+  yesterday=$(vnstat -i eth0 | grep yesterday | awk '{print $8}')
+  yesterday_v=$(vnstat -i eth0 | grep yesterday | awk '{print $9}')
+  yesterday_rx=$(vnstat -i eth0 | grep yesterday | awk '{print $2}')
+  yesterday_rxv=$(vnstat -i eth0 | grep yesterday | awk '{print $3}')
+  yesterday_tx=$(vnstat -i eth0 | grep yesterday | awk '{print $5}')
+  yesterday_txv=$(vnstat -i eth0 | grep yesterday | awk '{print $6}')
+else
+  yesterday=NULL
+  yesterday_v=NULL
+  yesterday_rx=NULL
+  yesterday_rxv=NULL
+  yesterday_tx=NULL
+  yesterday_txv=NULL
+fi
+rm -f /root/t1
 bash /root/.fontsam/banner
+echo -e " "
 echo -e " ${red} Premium Script"
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "                       • SERVER INFORMATION •" | lolcat
@@ -69,6 +91,7 @@ echo -e " ${red}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
 echo -e " ${red}CLIENT NAME                 : $name${NC}"
 echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${red}CONTACT TELEGRAM            : @GHReyz"
+echo -e " "
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e " TRAFFIC           TODAY          YESTERDAY          MONTH          " | lolcat
 echo -e " UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv          $month_tx $month_txv          " | lolcat
@@ -84,6 +107,7 @@ echo -e " ${red}[  1 ] SSH & OPENVPN                  [  2 ] WIREGUARD"
 echo -e " ${red}[  3 ] SHADOWSOCKS R                  [  4 ] SHADOWSOCKS OBFS"
 echo -e " ${red}[  5 ] V2RAY CORE                     [  6 ] XRAY CORE"
 echo -e " ${red}[  7 ] TROJAN GFW"
+echo -e " "
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "                         • SYSTEM MENU • " | lolcat
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
@@ -94,12 +118,12 @@ echo -e " [ 14 ] REBOOT VPS                     [ 15 ] SPEEDTEST VPS"
 echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
 echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
 echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
+echo -e " "
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "  Premium Script By Reyz-V4" | lolcat
 echo -e "  Thank You For Using Script By Reyz-V4" | lolcat
 echo -e " ═════════════════════════════════════════════════════════════════ " | lolcat
 echo -e "  "
-rm -f /root/t1
 echo -e "\e[1;31m"
 read -p "     Please select an option :  " menu
 echo -e "\e[0m"
