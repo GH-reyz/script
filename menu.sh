@@ -92,10 +92,10 @@ echo -e " ${red}CLIENT NAME                 : $name${NC}"
 echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${red}CONTACT TELEGRAM            : @GHReyz"
 echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
-echo -e " TRAFFIC           TODAY          YESTERDAY          MONTH" | lolcat
-echo -e " UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv" | lolcat
-echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" | lolcat
-echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v" | lolcat
+echo -e " ${red}TRAFFIC           TODAY          YESTERDAY          MONTH" 
+echo -e " UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv" 
+echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" 
+echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v" 
 echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
 echo -e " TOTAL USER        SSH/OVPN          XRAY            V2RAY" | lolcat
 echo -e "                      $total_ssh               $total_xray                $total_v2ray" | lolcat
