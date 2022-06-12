@@ -76,7 +76,7 @@ fi
 rm -f /root/t1
 bash /root/.fontsam/banner
 echo -e " "
-echo -e " ${red} Premium Script"
+echo -e "  Premium Script"
 echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
 echo -e "                       • SERVER INFORMATION •" | lolcat
 echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
@@ -92,12 +92,12 @@ echo -e " ${red}CLIENT NAME                 : $name${NC}"
 echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${red}CONTACT TELEGRAM            : @GHReyz"
 echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
-echo -e " TRAFFIC           TODAY          YESTERDAY          MONTH" | lolcat 
+echo -e " TRAFFIC           TODAY          YESTERDAY          MONTH"  
 echo -e " UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv" 
 echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" 
 echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v" 
 echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
-echo -e " TOTAL USER        SSH/OVPN          XRAY            V2RAY" | lolcat
+echo -e " TOTAL USER        SSH/OVPN          XRAY            V2RAY" 
 echo -e "                      $total_ssh               $total_xray                $total_v2ray" 
 echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
 echo -e "                          • MAIN MENU •" | lolcat
@@ -117,8 +117,8 @@ echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
 echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
 echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
 echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
-echo -e "  Premium Script By Reyz-V4" | lolcat
-echo -e "  Thank You For Using Script By Reyz-V4" | lolcat
+echo -e "  Premium Script By Reyz-V4" 
+echo -e "  Thank You For Using Script By Reyz-V4" 
 echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
 echo -e "  "
 echo -e "\e[1;31m"
