@@ -1,10 +1,10 @@
 #!/bin/bash
 clear
-red='\e[1;33m'
+red='\e[1;31m'
 green='\e[0;32m'
 blue='\e[0;34m'
 blue_b='\e[0;94m'
-yellow='\e[1;35m'
+yellow='\e[1;33m'
 sea='\e[1;36m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com)
