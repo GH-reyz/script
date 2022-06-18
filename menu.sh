@@ -1,11 +1,11 @@
 #!/bin/bash
 clear
-red='\e[1;35m'
+red='\e[1;33m'
 green='\e[0;32m'
 blue='\e[0;34m'
 blue_b='\e[0;94m'
-yellow='\e[1;33m'
-sea='\[1;36m'
+yellow='\e[1;35m'
+sea='\e[1;36m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com)
 IZIN=$(curl https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $MYIP | awk '{print $4}')
@@ -93,7 +93,7 @@ echo -e " ${red}CLIENT NAME                 : $name${NC}"
 echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${red}CONTACT TELEGRAM            : @GHReyz"
 echo -e " ═════════════════════════════════════════════════════════════════" | lolcat
-echo -e " ${yellow}TRAFFIC           TODAY          YESTERDAY          MONTH"  
+echo -e " TRAFFIC           TODAY          YESTERDAY          MONTH"  
 echo -e " UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv" 
 echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" 
 echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v" 
