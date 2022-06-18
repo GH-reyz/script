@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-red='\#00ffff'
+red='\e[1;30m'
 green='\e[0;32m'
 blue='\e[0;34m'
 blue_b='\e[0;94m'
