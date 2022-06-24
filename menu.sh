@@ -1,9 +1,9 @@
 ini#!/bin/bash
 clear
 red='\e[1;31m'
-green='\e[4;32m'
-blue='\e[0;34m'
-blue_b='\e[0;94m'
+green='\e[1;32m'
+blue='\e[1;34m'
+blue_b='\e[1;94m'
 yellow='\e[1;33m'
 sea='\e[1;34m'
 white='\e[1;37m'
@@ -124,7 +124,7 @@ echo -e " ${white}🔰 Premium Script By Reyz-V4 🔰"
 echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰" 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
 echo -e " "
-echo -e "\e[1;31m"
+echo -e "\e[1;34m"
 read -p "     Please select an option :  " menu 
 
 echo -e "\e[0m"
