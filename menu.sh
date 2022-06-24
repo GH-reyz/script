@@ -123,7 +123,7 @@ echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
 echo -e " 
 echo -e "\e[1;31m"
-read -p "     Please select an option :  " menu
+read -p "     Please select an option :  " menu "
 echo -e "\e[0m"
 case $menu in
 1)
