@@ -1,7 +1,7 @@
 ini#!/bin/bash
 clear
 red='\e[0;31m'
-green='\e[1;32m'
+green='\e[42m'
 blue='\e[0;34m'
 blue_b='\e[0;94m'
 yellow='\e[1;33m'
