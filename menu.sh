@@ -81,7 +81,7 @@ bash /root/.fontsam/banner
 echo -e " "
 echo -e "  Premium Script"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${green}                      • SERVER INFORMATION • 
+echo -e " ${green}                      • SERVER INFORMATION • " 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${red}VPS TYPE                    : PREMIUM"
 echo -e " ${red}IP VPS NUMBER               : $IPVPS${NC}"
