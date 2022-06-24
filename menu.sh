@@ -6,6 +6,7 @@ blue='\e[0;34m'
 blue_b='\e[0;94m'
 yellow='\e[1;33m'
 sea='\e[1;34m'
+white='\e[0;37m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com)
 IZIN=$(curl https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $MYIP | awk '{print $4}')
@@ -93,7 +94,7 @@ echo -e " ${red}CLIENT NAME                 : $name${NC}"
 echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${red}CONTACT TELEGRAM            : @GHReyz"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " ${green}TRAFFIC           TODAY          YESTERDAY          MONTH"  
+echo -e " ${white}TRAFFIC           TODAY          YESTERDAY          MONTH"  
 echo -e " UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv" 
 echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" 
 echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v" 
@@ -118,7 +119,7 @@ echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
 echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
 echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " ${green}🔰 Premium Script By Reyz-V4 🔰" 
+echo -e " ${white}🔰 Premium Script By Reyz-V4 🔰" 
 echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰" 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
 echo -e " "
