@@ -29,6 +29,7 @@ up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF="";
 cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 tram=$( free -m | awk 'NR==2 {print $2}' )
+cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 cekxray="$(openssl x509 -dates -noout </etc/v2ray/v2ray.crt)"
 expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
 name=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $2}')
@@ -94,6 +95,7 @@ echo -e " ${red}DOMAIN                      : $DOMAIN${NC}"
 echo -e " ${red}TIME                        : $TIME"
 echo -e " ${red}FREQUENCY                   : $freq MHz"
 echo -e " ${red}VPS TYPE                    : PREMIUM"
+echo -e " ${red}CPU MODEL                   : $cname"
 echo -e " ${red}AMOUNT OF RAM               : $tram MB"
 echo -e " ${red}ISP NAME                    : $ISP"
 echo -e " ${red}IP VPS NUMBER               : $IPVPS${NC}"
