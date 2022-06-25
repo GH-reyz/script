@@ -1,13 +1,14 @@
 ini#!/bin/bash
 clear
-red='\e[0;36m'
+red='\e[1;35m'
 green='\e[1;32m'
 blue='\e[1;34m'
 blue_b='\e[1;94m'
 yellow='\e[1;33m'
-sea='\e[1;34m'
+purple='\e[1;35m'
 white='\e[1;37m'
 try='\e[0;103m'
+cyan='\e[1;36m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com)
 IZIN=$(curl https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $MYIP | awk '{print $4}')
@@ -109,20 +110,20 @@ echo -e " ${red}KERNEL VERSION              : $(uname -r)${NC}"
 echo -e " ${red}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
 echo -e " ${red}TELEGRAM                    : @GHReyz"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " ${white}TRAFFIC           TODAY          YESTERDAY          MONTH"  
+echo -e " ${cyan}TRAFFIC           TODAY          YESTERDAY          MONTH"  
 echo -e " UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv" 
 echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" 
 echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v" 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " ${white}TOTAL USER        SSH/OVPN          XRAY            V2RAY" 
+echo -e " ${cyan}TOTAL USER        SSH/OVPN          XRAY            V2RAY" 
 echo -e "                      $total_ssh               $total_xray                $total_v2ray" 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
 echo -e " ${green}                         • MAIN MENU • "   
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " ${red}[  1 ] SSH & OPENVPN                  [  2 ] WIREGUARD"
-echo -e " ${red}[  3 ] SHADOWSOCKS R                  [  4 ] SHADOWSOCKS OBFS"
-echo -e " ${red}[  5 ] V2RAY CORE                     [  6 ] XRAY CORE"
-echo -e " ${red}[  7 ] TROJAN GFW"
+echo -e " ${purple}[  1 ] SSH & OPENVPN                  [  2 ] WIREGUARD"
+echo -e " ${purple}[  3 ] SHADOWSOCKS R                  [  4 ] SHADOWSOCKS OBFS"
+echo -e " ${purple}[  5 ] V2RAY CORE                     [  6 ] XRAY CORE"
+echo -e " ${purple}[  7 ] TROJAN GFW"
 echo -e " ${yellow}════════════════════════════════════════════════════════════════="
 echo -e " ${green}                        • SYSTEM MENU • " 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
