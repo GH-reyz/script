@@ -87,7 +87,7 @@ echo -e " ${red}VPS TYPE                    : PREMIUM"
 echo -e " ${red}IP VPS NUMBER               : $IPVPS${NC}"
 echo -e " ${red}DOMAIN                      : $DOMAIN${NC}"
 echo -e " ${red}CITY                        : $city${NC}"
-echo -e " ${red}CPU USAGE                   : $htop${NC}"
+echo -e " ${red}CPU USAGE                   : $htop"
 echo -e " ${red}SCRIPT VERSION              : REYZ-V4 (V1)"
 echo -e " ${red}OS VERSION                  : $(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)"${NC}
 echo -e " ${red}KERNEL VERSION              : $(uname -r)${NC}"
