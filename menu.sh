@@ -23,7 +23,8 @@ echo -e " "
 IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
 city=$(curl -s https://ipinfo.io/json | grep -o 'city": "[^"]*' | grep -o '[^"]*$')
-CPU USAGE=$htop
+TIME=$(curl -s ipinfo.io/timezone )
+ISP NAME=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 cekxray="$(openssl x509 -dates -noout </etc/v2ray/v2ray.crt)"
 expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
 name=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $2}')
