@@ -24,7 +24,7 @@ IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
 city=$(curl -s https://ipinfo.io/json | grep -o 'city": "[^"]*' | grep -o '[^"]*$')
 TIME=$(curl -s ipinfo.io/timezone )
-ISP NAME=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 cekxray="$(openssl x509 -dates -noout </etc/v2ray/v2ray.crt)"
 expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
 name=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $2}')
@@ -91,7 +91,7 @@ echo -e " ${red}DOMAIN                      : $DOMAIN${NC}"
 echo -e " ${red}CITY                        : $city${NC}"
 echo -e " ${red}TIME                        : $TIME"
 echo -e " ${red}CPU USAGE                   : $HTOP"
-echo -e " ${red}ISP NAME                    : $ISP NAME"
+echo -e " ${red}ISP NAME                    : $ISP"
 echo -e " ${red}SCRIPT VERSION              : REYZ-V4 (V1)"
 echo -e " ${red}OS VERSION                  : $(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)"${NC}
 echo -e " ${red}KERNEL VERSION              : $(uname -r)${NC}"
