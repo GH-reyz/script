@@ -23,7 +23,7 @@ echo -e " "
 IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
 city=$(curl -s https://ipinfo.io/json | grep -o 'city": "[^"]*' | grep -o '[^"]*$')
-TIME=$(curl -s ipinfo.io/timezone )
+TIME=`curl -sS ip-api.com | grep -w "timezone" | awk '{print $3}' | cut -d'"' -f2 | tee -a /etc/afak.conf`
 ISP=`curl -sS ip-api.com | grep -w "isp" | awk '{print $3,$4,$5,$6,$7,$8,$9}' | cut -d'"' -f2 | cut -d',' -f1 | tee -a /etc/afak.conf`
 cekxray="$(openssl x509 -dates -noout </etc/v2ray/v2ray.crt)"
 expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
@@ -85,13 +85,12 @@ echo -e "  Premium Script"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${green}                      • SERVER INFORMATION • " 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${red}VPS TYPE                    : PREMIUM"
-echo -e " ${red}IP VPS NUMBER               : $IPVPS${NC}"
-echo -e " ${red}DOMAIN                      : $DOMAIN${NC}"
 echo -e " ${red}CITY                        : $city${NC}"
+echo -e " ${red}DOMAIN                      : $DOMAIN${NC}"
 echo -e " ${red}TIME                        : $TIME"
-echo -e " ${red}CPU USAGE                   : $HTOP"
+echo -e " ${red}VPS TYPE                    : PREMIUM"
 echo -e " ${red}ISP NAME                    : $ISP"
+echo -e " ${red}IP VPS NUMBER               : $IPVPS${NC}"
 echo -e " ${red}SCRIPT VERSION              : REYZ-V4 (V1)"
 echo -e " ${red}OS VERSION                  : $(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)"${NC}
 echo -e " ${red}KERNEL VERSION              : $(uname -r)${NC}"
