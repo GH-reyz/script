@@ -18,7 +18,7 @@ echo -e "#                                                                    #"
 echo -e "#                         - Script By REYZ-V4                        #" | lolcat
 echo -e "#           │▒│ /▒/       - Thanks To ALLAH SWT                     #" | lolcat
 echo -e "#           │▒│/▒/        - Whatsapp  : 🔏                           #" | lolcat
-echo -e "#         　│▒ /▒/─┬─┐    - Telegram : t.me/GHReyz                  #" | lolcat
+echo -e "#         　│▒ /▒/─┬─┐    - Telegram : t.me/GHReyz                 #" | lolcat
 echo -e "#           │▒│▒|▒│▒│     - To those who use this script,            #" | lolcat
 echo -e "#          ┌┴─┴─┐-┘─┘       sorry because this script very simple    #" | lolcat
 echo -e "#          │▒┌──┘▒▒▒│     - Thanks for who using this script         #" | lolcat
