@@ -141,7 +141,6 @@ echo -e " ${yellow}════════════════════�
 echo -e " "
 echo -e "\e[1;37m"
 read -p "     Please select an option :  " menu 
-
 echo -e "\e[0m"
 case $menu in
 1)
