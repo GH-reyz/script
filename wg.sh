@@ -93,7 +93,7 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /usr/bin
-wget -O mwg "https://raw.githubusercontent.com/GH-reyz/script/main/WG/mwg.sh"
+wget -O mwg "https://raw.githubusercontent.com/GH-reyz/script/main/mwg.sh"
 wget -O add-wg "https://raw.githubusercontent.com/GH-reyz/script/main/add-wg.sh"
 wget -O del-wg "https://raw.githubusercontent.com/GH-reyz/script/main/del-wg.sh"
 wget -O cek-wg "https://raw.githubusercontent.com/GH-reyz/script/main/cek-wg.sh"
