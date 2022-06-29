@@ -30,6 +30,9 @@ up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF="";
 cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 tram=$( free -m | awk 'NR==2 {print $2}' )
+cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
+cpu_usage="$((${cpu_usage1/\.*} / ${corediilik:-1}))"
+cpu_usage+=" %"
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 cekxray="$(openssl x509 -dates -noout </etc/v2ray/v2ray.crt)"
 expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
@@ -95,6 +98,7 @@ echo -e " ${red}CPU MODEL                   :$cname"
 echo -e " ${red}NUMBER OF CORES             : $cores"
 echo -e " ${red}CPU FREQUENCY               :$freq MHz"
 echo -e " ${red}TOTAL AMOUNT OF RAM         : $tram MB"
+echo -e " ${red}CPU USAGE                   : $cpu_usage1"
 echo -e " ${red}SYSTEM UPTIME               : $up"
 echo -e " ${red}ISP/PROVIDER NAME           : $ISP"
 echo -e " ${red}CITY LOCATION               : $city${NC}"
