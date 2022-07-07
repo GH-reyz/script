@@ -5,7 +5,7 @@ green='\e[1;32m'
 blue='\e[1;34m'
 blue_b='\e[1;94m'
 yellow='\e[1;33m'
-purple='\e[1;38m'
+purple='\e[1;35m'
 white='\e[1;37m'
 try='\e[0;103m'
 cyan='\e[1;36m'
@@ -17,7 +17,7 @@ if [ $MYIP = $IZIN ]; then
   clear
 else
   echo -e ""
-  echo -e "${green}ACCESS DENIED...PM TELEGRAM OWNER${NC}"
+  echo -e "${green}ACCESS DENIED...PM TELEGRAM OWNER @GHReyz${NC}"
   exit 1
 fi
 echo -e " "
@@ -90,7 +90,7 @@ fi
 rm -f /root/t1
 bash /root/.fontsam/banner
 echo -e " "
-echo -e "  Premium Script"
+echo -e "  Premium Script | lolcat
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${green}                      • SERVER INFORMATION • " 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
@@ -139,8 +139,8 @@ echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
 echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
 echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " ${white}🔰 Premium Script By Reyz-V4 🔰" 
-echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰" 
+echo -e " 🔰 Premium Script By Reyz-V4 🔰 | lolcat
+echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰 | lolcat
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
 echo -e " "
 echo -e "\e[1;37m"
