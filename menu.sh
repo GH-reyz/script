@@ -1,11 +1,11 @@
 ini#!/bin/bash
 clear
 red='\e[1;35m'
-green='\e[1;32m'
+green='\e[47m'
 blue='\e[1;34m'
 blue_b='\e[1;94m'
 yellow='\e[1;33m'
-purple='\e[1;35m'
+purple='\e[1;31m'
 white='\e[1;37m'
 try='\e[0;103m'
 cyan='\e[1;36m'
@@ -139,12 +139,13 @@ echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
 echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
 echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " 🔰 Premium Script By Reyz-V4 🔰" | lolcat
-echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰" | lolcat
+echo -e " ${white}🔰 Premium Script By Reyz-V4 🔰" 
+echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰" 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
 echo -e " "
 echo -e "\e[1;37m"
 read -p "     Please select an option :  " menu 
+echo -e " "
 echo -e "\e[0m"
 case $menu in
 1)
