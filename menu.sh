@@ -90,7 +90,7 @@ fi
 rm -f /root/t1
 bash /root/.fontsam/banner
 echo -e " "
-echo -e "  Premium Script | lolcat
+echo -e "  Premium Script"| lolcat
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${green}                      • SERVER INFORMATION • " 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
@@ -139,8 +139,8 @@ echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
 echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
 echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " 🔰 Premium Script By Reyz-V4 🔰 | lolcat
-echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰 | lolcat
+echo -e " 🔰 Premium Script By Reyz-V4 🔰" | lolcat
+echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰" | lolcat
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
 echo -e " "
 echo -e "\e[1;37m"
