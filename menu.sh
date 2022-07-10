@@ -92,7 +92,7 @@ bash /root/.fontsam/banner
 echo -e " "
 echo -e "  Premium Script"| lolcat
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${bred}                      • SERVER INFORMATION •                                   "${NC}
+echo -e " ${bred}                      • SERVER INFORMATION •                              "${NC}
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${red}CPU MODEL                   :$cname"
 echo -e " ${red}NUMBER OF CORES             : $cores"
