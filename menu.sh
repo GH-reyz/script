@@ -2,7 +2,7 @@ ini#!/bin/bash
 clear
 red='\e[1;35m'
 bred1='\e[45m'
-bred='\e[41m'
+bred='\e[0;107m'
 blue='\e[1;34m'
 blue_b='\e[1;94m'
 yellow='\e[1;33m'
@@ -93,7 +93,7 @@ bash /root/.fontsam/banner
 echo -e " "
 echo -e "  Premium Script"| lolcat
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${bred1}                      • SERVER INFORMATION •                     "${NC}
+echo -e " ${bred}                      • SERVER INFORMATION •                     "${NC}
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${red}CPU MODEL                   :$cname"
 echo -e " ${red}NUMBER OF CORES             : $cores"
