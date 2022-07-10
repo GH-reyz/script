@@ -2,7 +2,7 @@ ini#!/bin/bash
 clear
 red='\e[1;35m'
 bred1='\e[45m'
-bred='\e[0;47m'
+bred='\e[41m'
 blue='\e[1;34m'
 blue_b='\e[1;94m'
 yellow='\e[1;33m'
@@ -93,7 +93,7 @@ bash /root/.fontsam/banner
 echo -e " "
 echo -e "  Premium Script"| lolcat
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${bred}                      • SERVER INFORMATION •                     "${NC}
+echo -e " ${bred1}                      • SERVER INFORMATION •                     "${NC}
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${red}CPU MODEL                   :$cname"
 echo -e " ${red}NUMBER OF CORES             : $cores"
@@ -139,6 +139,7 @@ echo -e " [ 14 ] REBOOT VPS                     [ 15 ] SPEEDTEST VPS"
 echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
 echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
 echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
+echo -e " [ 21 ] BANDWIDTH USAGE"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
 echo -e " ${white}🔰 Premium Script By Reyz-V4 🔰" 
 echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰" 
@@ -207,6 +208,9 @@ case $menu in
   ;;
 20)
   update
+  ;;
+21)
+  vnstat
   ;;
 0)
   sleep 0.5
