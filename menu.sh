@@ -2,7 +2,7 @@ ini#!/bin/bash
 clear
 red='\e[1;35m'
 bred1='\e[45m'
-bred='\e[0;107m'
+bred='\e[0;47m'
 blue='\e[1;34m'
 blue_b='\e[1;94m'
 yellow='\e[1;33m'
