@@ -1,4 +1,4 @@
-nkini#!/bin/bash
+ini#!/bin/bash
 clear
 red='\e[1;35m'
 green='\e[1;36m'
@@ -127,7 +127,7 @@ echo -e " ${yellow}════════════════════�
 echo -e " ${purple}[  1 ] SSH & OPENVPN                  [  2 ] WIREGUARD"
 echo -e " ${purple}[  3 ] SHADOWSOCKS R                  [  4 ] SHADOWSOCKS OBFS"
 echo -e " ${purple}[  5 ] V2RAY CORE                     [  6 ] XRAY CORE"
-echo -e " ${purple}[  7 ] TROJAN GFW"
+echo -e " ${purple}[  7 ] TROJAN GFW                     [  * ] BANDWIDTH USAGE"
 echo -e " ${yellow}════════════════════════════════════════════════════════════════="
 echo -e " ${green}                        • SYSTEM MENU • " 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
@@ -138,7 +138,6 @@ echo -e " [ 14 ] REBOOT VPS                     [ 15 ] SPEEDTEST VPS"
 echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
 echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
 echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
-echo -e " [ 21 ] BANDWIDTH USAGE"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
 echo -e " ${white}🔰 Premium Script By Reyz-V4 🔰" 
 echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰" 
@@ -169,6 +168,9 @@ case $menu in
   ;;
 7)
   mtrojan
+  ;;
+*)
+  vnstat
   ;;
 8)
   add-host
@@ -208,9 +210,6 @@ case $menu in
   ;;
 20)
   update
-  ;;
-21)
-  vnstat
   ;;
 0)
   sleep 0.5
