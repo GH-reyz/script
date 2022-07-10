@@ -1,4 +1,4 @@
-ini#!/bin/bash
+nkini#!/bin/bash
 clear
 red='\e[1;35m'
 green='\e[2;32m'
@@ -119,7 +119,7 @@ echo -e " ${white}UPLOAD            $today_tx $today_txv      $yesterday_tx $yes
 echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" 
 echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v" 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " $TOTAL USER        SSH/OVPN          XRAY            V2RAY" | lolcat 
+echo -e " ${cyan}TOTAL USER        SSH/OVPN          XRAY            V2RAY" | lolcat 
 echo -e " ${white}                     $total_ssh               $total_xray                $total_v2ray" 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
 echo -e " ${green}                         • MAIN MENU • "   
