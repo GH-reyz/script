@@ -138,6 +138,7 @@ echo -e " [ 14 ] REBOOT VPS                     [ 15 ] SPEEDTEST VPS"
 echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
 echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
 echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
+echo -e " [ 21 ] BANDWIDTH USAGE"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
 echo -e " ${white}🔰 Premium Script By Reyz-V4 🔰" 
 echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰" 
@@ -207,6 +208,9 @@ case $menu in
   ;;
 20)
   update
+  ;;
+21)
+  vnstat
   ;;
 0)
   sleep 0.5
