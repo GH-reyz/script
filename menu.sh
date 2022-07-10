@@ -1,7 +1,7 @@
 nkini#!/bin/bash
 clear
 red='\e[1;35m'
-green='\e[2;32m'
+green='\e[1;36m'
 blue='\e[1;34m'
 blue_b='\e[1;94m'
 yellow='\e[1;33m'
