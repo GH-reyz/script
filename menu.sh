@@ -93,7 +93,6 @@ else
 fi
 rm -f /root/t1
 bash /root/.fontsam/banner
-echo -e " "
 echo -e "  Premium Script" | lolcat
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${bred1}                      • SERVER INFORMATION •                     "${NC}
