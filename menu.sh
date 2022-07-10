@@ -169,9 +169,6 @@ case $menu in
 7)
   mtrojan
   ;;
-*)
-  vnstat
-  ;;
 8)
   add-host
   ;;
