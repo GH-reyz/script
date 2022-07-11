@@ -5,14 +5,13 @@ green='\e[1;33m'
 NC='\e[0m'
 ok='\e[0;m'
 
-echo -e  " ${red}=========================================================================="
-echo -e  " ${red}                                  SYSTEM MENU "                                                                                                  
-echo -e  " ${red}=========================================================================="
+echo -e  " ${red}=================================================================="
+echo -e  " ${red}                           SYSTEM MENU "                                                                                                  
+echo -e  " ${red}=================================================================="
 echo -e  " ${red}[ 1 ] ADD/CHANGE DOMAIN VPS           [  2 ] CHANGE PORT SERVICE"
-echo -e  " [ 3 ] CHANGE DNS SERVER               [ 4 ] RENEW CERTIFICATION"
-echo -e  " [ 5 ] WEBMIN MENU                     [ 6 ] CHECK RAM USAGE"
-echo -e  " [ 7 ] SPEEDTEST VPS                   [ 8 ] CHECK GEO LOCATION "
-echo -e  " [ 9 ] SYSTEM INFORMATION              [ 10] BANDWIDTH SERVER"
+echo -e  " [ 3 ] CHANGE DNS SERVER               [ 4 ] WEBMIN MENU"
+echo -e  " [ 5 ] CHECK GEO LOCATION              [ 6 ] CHANGE PASSWORD VPS
+echo -e  " [ 7 ] SYSTEM INFORMATION              [ 8 ] BANDWIDTH SERVER"
 echo -e "=========================================================================="
 echo -e "${red}[ 0 ] EXIT TO MENU"
 echo -e "=========================================================================="
@@ -32,24 +31,18 @@ case $v2raycore in
    mdns
    ;;
    4)
-   recert-xrayv2ray
-   ;;
-   5)
    wbmn
    ;;
    6)
-   ram
-   ;;
-   7)
-   speedtest
+   passwd
    ;; 
-   8)
+   5)
     nf
    ;;  
-   10)
+   8)
    vnstat
    ;;
-   9)
+   7)
    info
    ;;     
    0)
