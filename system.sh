@@ -8,9 +8,9 @@ ok='\e[0;m'
 echo -e  " ${red}=================================================================="
 echo -e  " ${red}                           SYSTEM MENU "                                                                                                  
 echo -e  " ${red}=================================================================="
-echo -e  " ${red}[ 1 ] ADD/CHANGE DOMAIN VPS           [  2 ] CHANGE PORT SERVICE"
+echo -e  " ${red}[ 1 ] ADD/CHANGE DOMAIN VPS           [ 2 ] CHANGE PORT SERVICE"
 echo -e  " [ 3 ] CHANGE DNS SERVER               [ 4 ] WEBMIN MENU"
-echo -e  " [ 5 ] CHECK GEO LOCATION              [ 6 ] CHANGE PASSWORD VPS
+echo -e  " [ 5 ] CHECK GEO LOCATION              [ 6 ] CHANGE PASSWORD VPS"
 echo -e  " [ 7 ] SYSTEM INFORMATION              [ 8 ] BANDWIDTH SERVER"
 echo -e "=========================================================================="
 echo -e "${red}[ 0 ] EXIT TO MENU"
