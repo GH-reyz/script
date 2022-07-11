@@ -136,7 +136,7 @@ echo -e " ${purple}[  7 ] TROJAN GFW                     [ 99 ] BANDWIDTH USAGE"
 echo -e " ${yellow}════════════════════════════════════════════════════════════════="
 echo -e " ${bred}                        • SYSTEM MENU •                          "${NC}
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${purple}[ 8 ]RENEW CERTIFICATION              [  9 ] CHECK RAM USAGE"
+echo -e " ${purple}[ 8 ] RENEW CERTIFICATION             [  9 ] CHECK RAM USAGE"
 echo -e " [ 10 ] REBOOT SERVER                  [ 11 ] SPEEDTEST SERVER"
 echo -e " [ 12 ] DISPLAY SYSTEM INFORMATION     [ 13 ] CHANGE SCRIPT BANNER"
 echo -e " [ 14 ] CHECK SERVICE ERROR            [ 15 ] CHANGE PASSWORD"
@@ -201,6 +201,9 @@ case $menu in
   ;;
 17) 
   system
+  ;;
+99)
+  vnstat
   ;;
 0)
   sleep 0.5
