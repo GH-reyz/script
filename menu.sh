@@ -136,11 +136,11 @@ echo -e " ${purple}[  7 ] TROJAN GFW                     [ 99 ] BANDWIDTH USAGE"
 echo -e " ${yellow}════════════════════════════════════════════════════════════════="
 echo -e " ${bred}                        • SYSTEM MENU •                          "${NC}
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${purple}[ 8 ]RENEW CERTIFICATION             [  9 ] CHECK RAM USAGE"
+echo -e " ${purple}[ 8 ]RENEW CERTIFICATION              [  9 ] CHECK RAM USAGE"
 echo -e " [ 10 ] REBOOT SERVER                  [ 11 ] SPEEDTEST SERVER"
 echo -e " [ 12 ] DISPLAY SYSTEM INFORMATION     [ 13 ] CHANGE SCRIPT BANNER"
 echo -e " [ 14 ] CHECK SERVICE ERROR            [ 15 ] CHANGE PASSWORD"
-echo -e " [ 16 ] UPDATE SCRIPT                  [ 17 ] CHECK BANDWIDTH VPS"
+echo -e " [ 16 ] UPDATE SCRIPT                  [ 17 ] MORE SYSTEM MENU"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${white}🔰 Premium Script By Reyz-V4 🔰"
 echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰"
@@ -200,7 +200,7 @@ case $menu in
   update
   ;;
 17) 
-  vnstat
+  system
   ;;
 0)
   sleep 0.5
