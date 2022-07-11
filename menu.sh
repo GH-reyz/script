@@ -136,14 +136,11 @@ echo -e " ${purple}[  7 ] TROJAN GFW                     [ 99 ] BANDWIDTH USAGE"
 echo -e " ${yellow}════════════════════════════════════════════════════════════════="
 echo -e " ${bred}                        • SYSTEM MENU •                          "${NC}
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${purple}[  8 ] ADD/CHANGE DOMAIN VPS          [  9 ] CHANGE PORT SERVICE"
-echo -e " [ 10 ] CHANGE DNS SERVER              [ 11 ] RENEW CERTIFICATION"
-echo -e " [ 12 ] WEBMIN MENU                    [ 13 ] CHECK RAM USAGE"
-echo -e " [ 14 ] REBOOT VPS                     [ 15 ] SPEEDTEST VPS"
-echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
-echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
-echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
-echo -e " [ 21 ] CHANGE PASSWORD VPS"
+echo -e " ${purple}[ 8 ]RENEW CERTIFICATION             [  9 ] CHECK RAM USAGE"
+echo -e " [ 10 ] REBOOT SERVER                  [ 11 ] SPEEDTEST SERVER"
+echo -e " [ 12 ] DISPLAY SYSTEM INFORMATION     [ 13 ] CHANGE SCRIPT BANNER"
+echo -e " [ 14 ] CHECK SERVICE ERROR            [ 15 ] CHANGE PASSWORD"
+echo -e " [ 16 ] UPDATE SCRIPT                  [ 17 ] CHECK BANDWIDTH VPS"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${white}🔰 Premium Script By Reyz-V4 🔰"
 echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰"
@@ -176,48 +173,33 @@ case $menu in
   mtrojan
   ;;
 8)
-  add-host
-  ;;
-9)
-  change
-  ;;
-10)
-  mdns
-  ;;
-11)
   recert-xrayv2ray
   ;;
-12)
-  wbmn
-  ;;
-13)
+9)
   ram
   ;;
-14)
+10)
   reboot
   ;;
-15)
+11)
   speedtest
   ;;
-16)
+12)
   info
   ;;
-17)
-  nf
-  ;;
-18)
+13)
   banner_changer
   ;;
-19)
+14)
   checksystem
   ;;
-20)
-  update
-  ;;
-21)
+15)
   passwd
   ;;
-99)
+16)
+  update
+  ;;
+17) 
   vnstat
   ;;
 0)
