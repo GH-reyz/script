@@ -1,4 +1,4 @@
-ini#!/bin/bash
+#!/bin/bash
 clear
 red='\e[1;35m'
 bred1='\e[45m'
@@ -91,7 +91,6 @@ else
 fi
 rm -f /root/t1
 bash /root/.fontsam/banner
-echo -e " "
 echo -e "  Premium Script" | lolcat
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${bred1}                      • SERVER INFORMATION •                     "${NC}
