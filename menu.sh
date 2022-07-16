@@ -49,7 +49,7 @@ total_xray=$(($c_xtls + $c_xvmess + $c_xvless + $c_grpc))
 total_v2ray=$(($c_vmess + $c_vless))
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 bulan=$(date +%b)
-vnstat_profile=$(vnstat | sed -n '3p' | awk '{print $1}')
+vnstat_profile=$(vnstat | sed -n '3p' | awk '{print $1}' | grep -o '[^:]*')
 vnstat -i ${vnstat_profile} >/root/t1
 today=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $8}')
 today_v=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $9}')
