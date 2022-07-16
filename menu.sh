@@ -35,6 +35,9 @@ cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
 cpu_usage="$((${cpu_usage1/\.*/} / ${corediilik:-1}))"
 cpu_usage+=" %"
 cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
+tram=$(free -m | awk 'NR==2 {print $2}')
+uram=$(free -m | awk 'NR==2 {print $3}')
+fram=$(free -m | awk 'NR==2 {print $4}')
 cekxray="$(openssl x509 -dates -noout </etc/v2ray/v2ray.crt)"
 expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
 name=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $2}')
@@ -100,6 +103,8 @@ echo -e " ${red}NUMBER OF CORES             : $cores"
 echo -e " ${red}CPU USAGE                   : $cpu_usage1 %"
 echo -e " ${red}CPU FREQUENCY               :$freq MHz"
 echo -e " ${red}TOTAL AMOUNT OF RAM         : $tram MB"
+echo -e " ${red}USED RAM                    : $uram MB"
+echo -e " ${red}FREE RAM                    : $fram MB"
 echo -e " ${red}SYSTEM UPTIME               : $up"
 echo -e " ${red}ISP/PROVIDER NAME           : $ISP"
 echo -e " ${red}CITY LOCATION               : $city${NC}"
