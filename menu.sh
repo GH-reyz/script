@@ -25,7 +25,7 @@ echo -e " "
 IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
 city=$(curl -s https://ipinfo.io/json | grep -o 'city": "[^"]*' | grep -o '[^"]*$')
-TIME=(date +"%T")
+TIME=$(date +"%T")
 ISP=$(curl -sS ip-api.com | grep -w "isp" | awk '{print $3,$4,$5,$6,$7,$8,$9}' | cut -d'"' -f2 | cut -d',' -f1 | tee -a /etc/afak.conf)
 DATE=$(date +"%d-%B-%Y")
 DAY=$(date +"%A")
