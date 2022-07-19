@@ -25,8 +25,10 @@ echo -e " "
 IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
 city=$(curl -s https://ipinfo.io/json | grep -o 'city": "[^"]*' | grep -o '[^"]*$')
-TIME=$(curl -sS ip-api.com | grep -w "timezone" | awk '{print $3}' | cut -d'"' -f2 | tee -a /etc/afak.conf)
+TIME=(date +"%T")
 ISP=$(curl -sS ip-api.com | grep -w "isp" | awk '{print $3,$4,$5,$6,$7,$8,$9}' | cut -d'"' -f2 | cut -d',' -f1 | tee -a /etc/afak.conf)
+DATE=$(date +"%d-%B-%Y")
+DAY=$(date +"%A")
 up=$(uptime | awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
 cores=$(awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo)
 freq=$(awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo)
@@ -109,6 +111,8 @@ echo -e " ${red}SYSTEM UPTIME               : $up"
 echo -e " ${red}ISP/PROVIDER NAME           : $ISP"
 echo -e " ${red}CITY LOCATION               : $city${NC}"
 echo -e " ${red}TIME LOCATION               : $TIME"
+echo -e " ${red}DATE LOCATION               : $DATE"
+echo -e " ${red}DAY LOCATION                : $DAY"
 echo -e " ${red}IP VPS NUMBER               : $IPVPS"
 echo -e " ${red}DOMAIN NAME                 : $DOMAIN${NC}"
 echo -e " ${red}VPS TYPE                    : PREMIUM"
