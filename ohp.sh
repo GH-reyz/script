@@ -11,7 +11,7 @@ apt-get -y upgrade
 
 #Masukkan port ohp
 OHPSSH=8010
-OHPOVPN=8111
+OHPOVPN=8000
 #Masukkan port proxy
 PROXYPORT=3128
 #Masukkan port dropbear dan ovpn
@@ -34,7 +34,7 @@ dev tun
 proto tcp
 setenv FRIENDLY_NAME "JINGGO VPN"
 remote bug 1194
-http-proxy xxxxxxxxx 8111
+http-proxy xxxxxxxxx 8000
 resolv-retry infinite
 route-method exe
 auth-user-pass
