@@ -559,7 +559,7 @@ cat > /etc/xray/vless-direct.json << END
   },
   "inbounds": [
     {
-      "port": 443,
+      "port": 6769,
       "protocol": "vless",
       "settings": {
         "clients": [
