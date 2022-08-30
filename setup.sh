@@ -170,6 +170,15 @@ rm -f /root/ssr.sh
 rm -f /root/ins-vt.sh
 rm -f /root/install-xray.sh
 rm -f /root/ohp.sh
+# Colour Default
+echo "1;36m" > /etc/banner
+echo "30m" > /etc/box
+echo "0;33m" > /etc/line
+echo "0;32m" > /etc/text
+echo "1;33m" > /etc/below
+echo "47m" > /etc/back
+echo "0;32m" > /etc/number
+echo 3d > /usr/bin/test
 
 apt install lolcat -y
 apt install figlet -y
