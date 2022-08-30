@@ -25,6 +25,7 @@ tram=$(free -m | awk 'NR==2 {print $2}')
 cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
 cpu_usage="$((${cpu_usage1/\.*/} / ${corediilik:-1}))"
 cpu_usage+=" %"
+red=`\e[0;31m'
 cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
 tram=$(free -m | awk 'NR==2 {print $2}')
 uram=$(free -m | awk 'NR==2 {print $3}')
@@ -138,14 +139,14 @@ echo -e   "   ${white}                     $total_ssh               $total_xray 
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
 echo -e   " \e[$back_text                        \e[30m[\e[$box MAIN MENU\e[30m ]\e[1m                            \e[m"
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
-echo -e " \e[$number [  1 ]\e[m \e[$below Panel Ssh & OpenVpn\e[m           \e[$number[  6 ]\e[m \e[$red REBOOT\e[m"
+echo -e " \e[$number [  1 ]\e[m \e[$below Panel Ssh & OpenVpn\e[m           \e[$number[  6 ]\e[m \e[$below REBOOT\e[m"
 echo -e " \e[$number [  2 ]\e[m \e[$below Panel V2ray Core\e[m              \e[$number[  7 ]\e[m \e[$below Check Service Error\e[m"     
 echo -e " \e[$number [  3 ]\e[m \e[$below Panel Xray Core\e[m               \e[$number[  8 ]\e[m \e[$below System Information\e[m"
 echo -e " \e[$number [  4 ]\e[m \e[$below Panel Trojan Gfw\e[m              \e[$number[  9 ]\e[m \e[$below Menu System Script\e[m"
 echo -e " \e[$number [  5 ]\e[m \e[$below Change Banner Script\e[m          \e[$number[  0 ]\e[m \e[$below Exit Menu\e[m"
 echo -e " \e[$number [ 10 ]\e[m \e[$below Menu Themes\e[m"
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
-echo -e " \e[$below Client Name   : $name\e[m"
+echo -e " \e[$below Client Name   :\e[m \e[$red $name\e[m"
 echo -e " \e[$below Script Status : $exp\e[m"
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
 echo -e ""
