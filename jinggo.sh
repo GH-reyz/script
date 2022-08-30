@@ -6,10 +6,8 @@ blue='\e[0;34m'
 purple='\e[1;35m'
 blue_b='\e[0;94m'
 NC='\e[0m'
-
-ar
-echo -e "\e[0m                                                                            "                                                                                                           
-echo -e "\e[93m                           AutoScript Reyz-V4                              "                                                                            
+echo -e "\e[0m                                                                              "                                                                                                           
+echo -e "\e[93m                           AutoScript Reyz-V4                                "                                                                            
 echo -e "\e[1;32m             ________________________________________________              "
 echo -e "\e[1;32m            /                                                \             "
 echo -e "\e[1;32m           |    _________________________________________     |            "
