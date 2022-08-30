@@ -273,8 +273,7 @@ wget -O jinggo "https://raw.githubusercontent.com/GH-reyz/script/main/jinggo.sh"
 wget -O mdns "https://raw.githubusercontent.com/GH-reyz/script/main/mdns.sh"
 wget -O nf "https://raw.githubusercontent.com/GH-reyz/script/main/nf.sh"
 wget -O update "https://raw.githubusercontent.com/GH-reyz/script/main/update.sh"
-wget -O system "https://raw.githubusercontent.com/GH-reyz/script/main/system.sh"
-wget -O themes "https://raw.githubusercontent.com/GH-reyz/script/main/themes.sh"
+wget -o system "https://raw.githubusercontent.com/GH-reyz/script/main/system.sh"
 chmod +x mssh
 chmod +x menu
 chmod +x add-host
@@ -305,7 +304,6 @@ chmod +x mdns
 chmod +x nf
 chmod +x update
 chmod +x system
-chmod +x themes
 sed -i -e 's/\r$//' system
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
