@@ -1,16 +1,5 @@
 #!/bin/bash
 clear
-red='\e[1;35m'
-bred1='\e[47m'
-bred='\e[47m'
-blue='\e[1;34m'
-blue_b='\e[1;94m'
-yellow='\e[1;31m'
-purple='\e[1;33m'
-white='\e[1;37m'
-try='\e[0;103m'
-cyan='\e[1;36m'
-green='\e[1;35m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com)
 IZIN=$(curl https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $MYIP | awk '{print $4}')
@@ -40,6 +29,18 @@ cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
 tram=$(free -m | awk 'NR==2 {print $2}')
 uram=$(free -m | awk 'NR==2 {print $3}')
 fram=$(free -m | awk 'NR==2 {print $4}')
+# TEXT ON BOX COLOUR
+box=$(cat /etc/box)
+# LINE COLOUR
+line=$(cat /etc/line)
+# TEXT COLOUR ON TOP
+text=$(cat /etc/text)
+# TEXT COLOUR BELOW
+below=$(cat /etc/below)
+# BACKGROUND TEXT COLOUR
+back_text=$(cat /etc/back)
+# NUMBER COLOUR
+number=$(cat /etc/number)
 
 # CERT V2RAY/XRAY
 cekxray="$(openssl x509 -dates -noout </etc/v2ray/v2ray.crt)"
@@ -106,57 +107,49 @@ fi
 rm -f /root/t1
 bash /root/.fontsam/banner
 echo -e "  Premium Script" | lolcat
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${bred1}                      • SERVER INFORMATION •                     "${NC}
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${red}CPU MODEL                   :$cname"
-echo -e " ${red}NUMBER OF CORES             : $cores"
-echo -e " ${red}CPU USAGE                   : $cpu_usage1 %"
-echo -e " ${red}CPU FREQUENCY               :$freq MHz"
-echo -e " ${red}TOTAL AMOUNT OF RAM         : $tram MB"
-echo -e " ${red}FREE RAM                    : $fram MB"
-echo -e " ${red}SYSTEM UPTIME               : $up"
-echo -e " ${red}ISP/PROVIDER NAME           : $ISP"
-echo -e " ${red}CITY LOCATION               : $city${NC}"
-echo -e " ${red}TIME LOCATION               : $TIME"
-echo -e " ${red}IP VPS NUMBER               : $IPVPS"
-echo -e " ${red}DOMAIN NAME                 : $DOMAIN${NC}"
-echo -e " ${red}TELEGRAM                    : @GHReyz"
-echo -e " ${red}SCRIPT VERSION              : REYZ-V4 (V1)"
-echo -e " ${red}OS VERSION                  : $(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)"${NC}
-echo -e " ${red}KERNEL VERSION              : $(uname -r)${NC}"
-echo -e " ${red}CERT V2RAY/XRAY            : $expxray${NC}"
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " TRAFFIC           TODAY          YESTERDAY          MONTH" | lolcat
-echo -e " ${white}UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv"
-echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv"
-echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v"
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${cyan}TOTAL USER        SSH/OVPN          XRAY            V2RAY" | lolcat
-echo -e " ${white}                     $total_ssh               $total_xray                $total_v2ray"
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${bred1}                         • MAIN MENU •                           "${NC}
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${green}[  1 ]\e[m \e[$purple SSH & OPENVPN\e[m                  \e[$green[  2 ]\e[m \e[$purple WIREGUARD"
-echo -e " ${green}[  3 ]\e[m \e[$purple SHADOWSOCKS R\e[m                  \e[$green[  4 ]\e[m \e[$purple SHADOWSOCKS OBFS"
-echo -e " ${green}[  5 ]\e[m \e[$purple V2RAY CORE\e[m                     \e[$green[  6 ]\e[m \e[$purple XRAY CORE"
-echo -e " ${green}[  7 ]\e[m \e[$purple TROJAN GFW\e[m                     \e[$green[ 99 ]\e[m \e[$purple BANDWIDTH SERVER"
-echo -e " ${yellow}════════════════════════════════════════════════════════════════="
-echo -e " ${bred1}                        • SYSTEM MENU •                          "${NC}
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${green}[  8 ]\e[m \e[$purple ADD/CHANGE DOMAIN VPS\e[m          \e[$green[  9 ]\e[m \e[$purple CHANGE PORT SERVICE"
-echo -e " ${green}[ 10 ]\e[m \e[$purple CHANGE DNS SERVER\e[m              \e[$green[ 11 ]\e[m \e[$purple RENEW CERTIFICATION"
-echo -e " ${green}[ 12 ]\e[m \e[$purple WEBMIN MENU\e[m                    \e[$green[ 13 ]\e[m \e[$purple CHECK RAM USAGE"
-echo -e " ${green}[ 14 ]\e[m \e[$purple REBOOT VPS\e[m                     \e[$green[ 15 ]\e[m \e[$purple SPEEDTEST VPS"
-echo -e " ${green}[ 16 ]\e[m \e[$purple DISPLAY SYSTEM INFORMATION\e[m     \e[$green[ 17 ]\e[m \e[$purple CHECK STREAM GEO"
-echo -e " ${green}[ 18 ]\e[m \e[$purple CHANGE SCRIPT BANNER\e[m           \e[$green[ 19 ]\e[m \e[$purple CHECK SERVICE ERROR"
-echo -e " ${green}[ 20 ]\e[m \e[$purple UPDATE SCRIPT\e[m                  \e[$green[  0 ]\e[m \e[$purple EXIT MENU${NC}"
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${green}CLIENT NAME   :\e[m \e[$purple $name${NC}"
-echo -e " ${green}SCRIPT STATUS :\e[m \e[$purple $exp${NC}"
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " "
-echo -e "\e[1;37m"
+echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
+echo -e   " \e[$back_text                    \e[30m[\e[$box SERVER INFORMATION\e[30m ]\e[1m                       \e[m"
+echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
+echo -e "  \e[$text Cpu Model                  :$cname\e[m"
+echo -e "  \e[$text Number Of Core             : $cores\e[m"
+echo -e "  \e[$text Cpu Usage                  : $cpu_usage1 %\e[m"
+echo -e "  \e[$text Cpu Frequency              :$freq MHz\e[m"
+echo -e "  \e[$text Total Amount Of Ram        : $tram MB\e[m"
+echo -e "  \e[$text Free Ram                   : $fram MB\e[m"
+echo -e "  \e[$text System Uptime              :$up\e[m"
+echo -e "  \e[$text Isp/Provider Name          : $ISP\e[m"
+echo -e "  \e[$text City Location              : $city\e[m"
+echo -e "  \e[$text Time Location              : $TIME\e[m"
+echo -e "  \e[$text IpVps Number               : $IPVPS\e[m"
+echo -e "  \e[$text Domain Name                : $DOMAIN\e[m"
+echo -e "  \e[$text Telegram                   : @GHReyz\e[m"
+echo -e "  \e[$text Script Version             : REYZ-V4 (V1)\e[m"
+echo -e "  \e[$text Os Version                 : $(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)\e[m"
+echo -e "  \e[$text Kernel Version             : $(uname -r)\e[m"
+echo -e "  \e[$text Certificate License        :${red} $expxray\e[m"
+echo -e "  \e[$line═════════════════════════════════════════════════════════════════\e[m"
+echo -e "  \e[$text Traffic           ${purple}Today          Yesterday          Month" 
+echo -e "  \e[$text Upload            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv"
+echo -e "  \e[$text Download          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv"
+echo -e "  \e[$text Total             $today $today_v      $yesterday $yesterday_v         $month $month_v"
+echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
+echo -e "  \e[$text Total User\e[m        \e[${text}Ssh/Ovpn          Xray            V2ray" 
+echo -e   "   ${white}                     $total_ssh               $total_xray                $total_v2ray"
+echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
+echo -e   " \e[$back_text                        \e[30m[\e[$box MAIN MENU\e[30m ]\e[1m                            \e[m"
+echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
+echo -e " \e[$number [  1 ]\e[m \e[$below Panel Ssh & OpenVpn\e[m           \e[$number[  6 ]\e[m \e[$red REBOOT"
+echo -e " \e[$number [  2 ]\e[m \e[$below Panel V2ray Core\e[m              \e[$number[  7 ]\e[m \e[$below Check Service Error\e[m"     
+echo -e " \e[$number [  3 ]\e[m \e[$below Panel Xray Core\e[m               \e[$number[  8 ]\e[m \e[$below System Information\e[m"
+echo -e " \e[$number [  4 ]\e[m \e[$below Panel Trojan Gfw\e[m              \e[$number[  9 ]\e[m \e[$below Menu System Script\e[m"
+echo -e " \e[$number [  5 ]\e[m \e[$below Change Banner Script\e[m          \e[$number[  0 ]\e[m \e[$below Exit Menu\e[m"
+echo -e " \e[$number [ 10 ]\e[m \e[$below Menu Themes\e[m"
+echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
+echo -e " \e[$below Client Name   : $name\e[m"
+echo -e " \e[$below Script Status : $exp\e[m"
+echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
+echo -e ""
+echo -e "\e[$below "
 read -p "     Please select an option :  " menu
 echo -e " "
 echo -e "\e[0m"
@@ -165,64 +158,31 @@ case $menu in
   mssh
   ;;
 2)
-  mwg
-  ;;
-3)
-  mssr
-  ;;
-4)
-  mss
-  ;;
-5)
   mv2raycore
   ;;
-6)
+3)
   mxraycore
   ;;
-7)
+4)
   mtrojan
   ;;
-8)
-  add-host
-  ;;
-9)
-  change
-  ;;
-10)
-  mdns
-  ;;
-11)
-  recert-xrayv2ray
-  ;;
-12)
-  wbmn
-  ;;
-13)
-  ram
-  ;;
-14)
-  reboot
-  ;;
-15)
-  speedtest
-  ;;
-16)
-  info
-  ;;
-17)
-  nf
-  ;;
-18)
+5)
   banner_changer
   ;;
-19)
+6)
+  reboot
+  ;;
+7)
   checksystem
   ;;
-20)
-  update
+8)
+  info
   ;;
-99)
-  vnstat
+9)
+  system
+  ;;
+10)
+  themes
   ;;
 0)
   sleep 0.5
