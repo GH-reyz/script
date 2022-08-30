@@ -18,7 +18,7 @@ echo -e  "${blue_b}         ░█▀▀▀█ ░█▀▀█ ░█▀▀█ �
 echo -e  "${blue_b}         ─▀▀▀▄▄ ░█─── ░█▄▄▀ ░█─ ░█▄▄█ ─░█──             "${NC}
 echo -e  "${blue_b}         ░█▄▄▄█ ░█▄▄█ ░█─░█ ▄█▄ ░█─── ─░█──              "${NC}
 echo -e  ""
-echo -e  "${purple}JANGAN CAKAP ABANG TAK PAYUNG ! ERROR ? CONTACT TELEGRAM @GHReyz"
+echo -e  "${purple}TELEGRAM @GHReyz"
 echo -e  ""
 echo -e  "${red}TYPE 'menu' TO GO TO MAIN OR 'exit' TO LOGOUT"${NC}
 echo -e  ""
