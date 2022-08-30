@@ -1280,7 +1280,7 @@ echo "30m" > /etc/box
 echo "0;33m" > /etc/line
 echo "0;32m" > /etc/text
 echo "0;33m" > /etc/below
-echo "47m" > /etc/back
+echo "0;37m" > /etc/back
 echo "0;32m" > /etc/number
 echo 3d > /usr/bin/test
 # Banner Name
