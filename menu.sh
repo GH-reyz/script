@@ -147,7 +147,7 @@ echo -e   " \e[$line════════════════════
 echo -e " \e[$below Client Name   :\e[m \e[$number $name\e[m"
 echo -e " \e[$below Script Status :\e[m \e[$number $exp\e[m"
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
-echo -e " \e[$number [ 0 ]\e[m \e[$below Exit Menu\e[m
+echo -e " \e[$number [ 0 ]\e[m \e[$below Exit Menu\e[m"
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
 echo -e ""
 echo -e "\e[$below "
