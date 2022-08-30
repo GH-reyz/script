@@ -1178,19 +1178,19 @@ menu
 elif [[ "$bc" = "3" ]]; then
 clear
 # Colour Banner
-echo "1;32m" > /etc/banner
+echo "0;32m" > /etc/banner
 # Colour in the box menu
-echo "1;37m" > /etc/box
+echo "0;37m" > /etc/box
 # Colour line menu
-echo "1;32m" > /etc/line
+echo "0;32m" > /etc/line
 # Colour top menu
-echo "1;32m" > /etc/text
+echo "0;32m" > /etc/text
 # Colour bot menu
-echo "1;32m" > /etc/below
+echo "0;32m" > /etc/below
 # Colour backround
 echo "42m" > /etc/back
 # Colour number
-echo "1;37m" > /etc/number
+echo "0;37m" > /etc/number
 # Font banner
 echo Slant > /usr/bin/test
 # Banner Name
@@ -1202,19 +1202,19 @@ menu
 elif [[ "$bc" = "4" ]]; then
 clear
 # Colour Banner
-echo "1;35m" > /etc/banner
+echo "0;35m" > /etc/banner
 # Colour in the box menu
 echo "30m" > /etc/box
 # Colour line menu
-echo "1;35m" > /etc/line
+echo "0;35m" > /etc/line
 # Colour top menu
-echo "1;35m" > /etc/text
+echo "0;35m" > /etc/text
 # Colour bot menu
-echo "1;35m" > /etc/below
+echo "0;35m" > /etc/below
 # Colour backround
 echo "47m" > /etc/back
 # Colour number
-echo "1;37m" > /etc/number
+echo "0;37m" > /etc/number
 # Font banner
 echo Braced > /usr/bin/test
 # Banner Name
@@ -1250,19 +1250,19 @@ menu
 elif [[ "$bc" = "6" ]]; then
 clear
 # Colour Banner
-echo "1;36m" > /etc/banner
+echo "0;36m" > /etc/banner
 # Colour in the box menu
 echo "30m" > /etc/box
 # Colour line menu
-echo "1;36m" > /etc/line
+echo "0;36m" > /etc/line
 # Colour top menu
-echo "1;36m" > /etc/text
+echo "0;36m" > /etc/text
 # Colour bot menu
 echo "1;36m" > /etc/below
 # Colour backround
 echo "47m" > /etc/back
 # Colour number
-echo "1;37m" > /etc/number
+echo "0;37m" > /etc/number
 # Font banner
 echo 3d > /usr/bin/test
 # Banner Name
@@ -1274,12 +1274,14 @@ menu
 elif [[ "$bc" = "7" ]]; then
 clear
 echo "1;36m" > /etc/banner
+# Colour Default
+echo "1;36m" > /etc/banner
 echo "30m" > /etc/box
-echo "1;31m" > /etc/line
-echo "1;32m" > /etc/text
-echo "1;33m" > /etc/below
+echo "0;33m" > /etc/line
+echo "0;32m" > /etc/text
+echo "0;33m" > /etc/below
 echo "47m" > /etc/back
-echo "1;35m" > /etc/number
+echo "0;32m" > /etc/number
 echo 3d > /usr/bin/test
 # Banner Name
 echo Premium > /usr/bin/bannerku
