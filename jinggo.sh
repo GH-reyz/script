@@ -19,7 +19,7 @@ echo -e "\e[1;32m           |   |    - Thanks To Allah SWT                |    |
 echo -e "\e[1;32m           |   |    - Telegram : t.me/GHReyz             |    |            "
 echo -e "\e[1;32m           |   |    - Thanks for who using this script   |    |            "
 echo -e "\e[1;32m           |   |    - To EnterMenuList = 'menu'          |    |            "                                                    
-echo -e "\e[1;32m           |   |                                         |    |            "
+echo -e "\e[1;32m           |   |    - Janda Semakin Di Depan             |    |            "
 echo -e "\e[1;32m           |   |_________________________________________|    |            "
 echo -e "\e[1;32m           |                                                  |            "
 echo -e "\e[1;32m            \_________________________________________________/            "
