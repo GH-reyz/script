@@ -25,7 +25,6 @@ tram=$(free -m | awk 'NR==2 {print $2}')
 cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
 cpu_usage="$((${cpu_usage1/\.*/} / ${corediilik:-1}))"
 cpu_usage+=" %"
-red=`\e[0;31m'
 cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
 tram=$(free -m | awk 'NR==2 {print $2}')
 uram=$(free -m | awk 'NR==2 {print $3}')
@@ -146,7 +145,7 @@ echo -e " \e[$number [  4 ]\e[m \e[$below Panel Trojan Gfw\e[m              \e[$
 echo -e " \e[$number [  5 ]\e[m \e[$below Change Banner Script\e[m          \e[$number[  0 ]\e[m \e[$below Exit Menu\e[m"
 echo -e " \e[$number [ 10 ]\e[m \e[$below Menu Themes\e[m"
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
-echo -e " \e[$below Client Name   :\e[m \e[$red $name\e[m"
+echo -e " \e[$below Client Name   :\e[m \e[$number $name\e[m"
 echo -e " \e[$below Script Status : $exp\e[m"
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
 echo -e ""
