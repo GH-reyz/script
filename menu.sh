@@ -136,7 +136,7 @@ echo -e "  \e[$text Download\e[m          \e[$white $today_rx $today_rxv      $y
 echo -e "  \e[$text Total\e[m             \e[$white $today $today_v      $yesterday $yesterday_v         $month $month_v"
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
 echo -e "  \e[$text Total User\e[m        \e[$below Ssh/Ovpn          Xray            V2ray" 
-echo -e    "    ${white}                     $total_ssh               $total_xray                $total_v2ray"
+echo -e   "   ${white}                     $total_ssh               $total_xray                $total_v2ray"
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
 echo -e   " \e[$back_text                        \e[30m[\e[$box MAIN MENU\e[30m ]\e[1m                            \e[m"
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
