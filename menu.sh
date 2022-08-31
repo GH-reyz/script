@@ -29,7 +29,7 @@ cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
 tram=$(free -m | awk 'NR==2 {print $2}')
 uram=$(free -m | awk 'NR==2 {print $3}')
 fram=$(free -m | awk 'NR==2 {print $4}')
-red='\e[1;31m'
+red='\e[0;31m'
 white='\e[0;37m'
 # TEXT ON BOX COLOUR
 box=$(cat /etc/box)
@@ -121,14 +121,14 @@ echo -e "  \e[$text Free Ram                   : $fram MB\e[m"
 echo -e "  \e[$text System Uptime              :$up\e[m"
 echo -e "  \e[$text Isp/Provider Name          : $ISP\e[m"
 echo -e "  \e[$text City Location              : $city\e[m"
-echo -e "  \e[$text Time Location              : $TIME\e[m"
+echo -e "  \e[$text Time Location              :$TIME\e[m"
 echo -e "  \e[$text IpVps Number               : $IPVPS\e[m"
 echo -e "  \e[$text Domain Name                : $DOMAIN\e[m"
 echo -e "  \e[$text Telegram                   : @GHReyz\e[m"
 echo -e "  \e[$text Script Version             : REYZ-V4 (V1)\e[m"
 echo -e "  \e[$text Os Version                 : $(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)\e[m"
 echo -e "  \e[$text Kernel Version             : $(uname -r)\e[m"
-echo -e "  \e[$text Certificate License        :\e[m \e[$red $expxray\e[m"
+echo -e "  \e[$text Certificate License        :\e[m \e[$red$expxray\e[m"
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
 echo -e "  \e[$text Traffic\e[m           \e[$white Today          Yesterday          Month" 
 echo -e "  \e[$text Upload\e[m            \e[$white $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv"
