@@ -30,6 +30,7 @@ tram=$(free -m | awk 'NR==2 {print $2}')
 uram=$(free -m | awk 'NR==2 {print $3}')
 fram=$(free -m | awk 'NR==2 {print $4}')
 red='\e[1;31m'
+white='\e[0;37m'
 # TEXT ON BOX COLOUR
 box=$(cat /etc/box)
 # LINE COLOUR
@@ -129,7 +130,7 @@ echo -e "  \e[$text Os Version                 : $(hostnamectl | grep "Operating
 echo -e "  \e[$text Kernel Version             : $(uname -r)\e[m"
 echo -e "  \e[$text Certificate License        :\e[m \e[$red $expxray\e[m"
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
-echo -e "  \e[$text Traffic           ${purple}Today          Yesterday          Month" 
+echo -e "  \e[$text Traffic\e[m           \e[$white Today          Yesterday          Month" 
 echo -e "  \e[$text Upload            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv"
 echo -e "  \e[$text Download          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv"
 echo -e "  \e[$text Total             $today $today_v      $yesterday $yesterday_v         $month $month_v"
