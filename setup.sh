@@ -145,7 +145,7 @@ echo "1;36m" > /etc/banner
 echo "30m" > /etc/box
 echo "0;33m" > /etc/line
 echo "0;32m" > /etc/text
-echo "1;33m" > /etc/below
+echo "0;33m" > /etc/below
 echo "47m" > /etc/back
 echo "0;32m" > /etc/number
 echo 3d > /usr/bin/test
