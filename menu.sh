@@ -29,7 +29,7 @@ cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
 tram=$(free -m | awk 'NR==2 {print $2}')
 uram=$(free -m | awk 'NR==2 {print $3}')
 fram=$(free -m | awk 'NR==2 {print $4}')
-red='\e[0;31m'
+red='\e[1;31m'
 # TEXT ON BOX COLOUR
 box=$(cat /etc/box)
 # LINE COLOUR
