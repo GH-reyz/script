@@ -1258,7 +1258,7 @@ echo "0;36m" > /etc/line
 # Colour top menu
 echo "0;36m" > /etc/text
 # Colour bot menu
-echo "1;36m" > /etc/below
+echo "0;36m" > /etc/below
 # Colour backround
 echo "47m" > /etc/back
 # Colour number
