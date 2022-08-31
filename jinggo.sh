@@ -22,9 +22,9 @@ echo -e "\e[1;32m ==============================================================
 echo -e "\e[1;31m                       COPYRIGHT © 6/2004               "
 echo -e "\e[1;31m              ReyzVPN POWERED BY GHReyz / Reyz-V4           "
 echo -e "\e[1;31m         Privacy Policy Terms & Conditions Disclaimer         "                                                                                                
-echo -e "\e[93m          .----------------------------------------------------. "
-echo -e "\e[93m          |             Script status : Premium                | "
-echo -e "\e[93m          '----------------------------------------------------' "
+echo -e "\e[93m     .----------------------------------------------------. "
+echo -e "\e[93m     |             Script status : Premium                | "
+echo -e "\e[93m     '----------------------------------------------------' "
 echo -e  ""
 echo -e  "${red}TYPE 'menu' TO GO TO MAIN OR 'exit' TO LOGOUT"${NC}
 echo -e  ""
