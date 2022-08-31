@@ -7,13 +7,11 @@ purple='\e[1;35m'
 blue_b='\e[0;94m'
 NC='\e[0m'
 echo -e "\e[1;32m ====================================================================# "
-echo -e "\e[1;32m                    Premium Script By REYZ-V4 "                       
-echo -e "\e[1;32m "                                                                   
+echo -e "\e[1;32m                    Premium Script By REYZ-V4 "                                                                                          
 echo -e "\e[1;32m                                                                    
 echo -e "\e[1;32m            ░█▀▀█ █▀▀ █──█ ▀▀█ ── ░█──░█ ─█▀█─ "                
 echo -e "\e[1;32m            ░█▄▄▀ █▀▀ █▄▄█ ▄▀─ ▀▀ ─░█░█─ █▄▄█▄  "               
-echo -e "\e[1;32m            ░█─░█ ▀▀▀ ▄▄▄█ ▀▀▀ ── ──▀▄▀─ ───█─  "               
-echo -e "\e[1;32m "                                                                   
+echo -e "\e[1;32m            ░█─░█ ▀▀▀ ▄▄▄█ ▀▀▀ ── ──▀▄▀─ ───█─  "                                                                                  
 echo -e "\e[1;32m                             - Script By REYZ-V4 "                       
 echo -e "\e[1;32m            │▒│ /▒/         - Thanks To ALLAH SWT "                   
 echo -e "\e[1;32m            │▒│/▒/          - Whatsapp  : 🔏 "                         
@@ -21,8 +19,7 @@ echo -e "\e[1;32m          　 │▒ /▒/─┬─┐  - Telegram : t.me/GHRey
 echo -e "\e[1;32m            │▒│▒|▒│▒│      - To those who use this script, "          
 echo -e "\e[1;32m           ┌┴─┴─┐-┘─┘       sorry because this script very simple " 
 echo -e "\e[1;32m           │▒┌──┘▒▒▒│     - Thanks for who using this script "      
-echo -e "\e[1;32m           └┐▒▒▒▒▒▒┌┘     - To EnterMenuList = 'menu' "             
-echo -e "\e[1;32m  "                                                                    
+echo -e "\e[1;32m           └┐▒▒▒▒▒▒┌┘     - To EnterMenuList = 'menu' "                                                                                 
 echo -e "\e[1;32m ====================================================================# "
 echo -e "\e[1;32m                         COPYRIGHT © 6/2004 "
 echo -e "\e[1;32m              ReyzVPN POWERED BY GHReyz / Reyz-V4 "
