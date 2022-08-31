@@ -7,8 +7,7 @@ purple='\e[1;35m'
 blue_b='\e[0;94m'
 NC='\e[0m'
 echo -e "\e[1;32m ====================================================================# "
-echo -e "\e[1;32m                    Premium Script By REYZ-V4 "                                                                                          
-echo -e "\e[1;32m                                                                    
+echo -e "\e[1;32m                   Premium Script By REYZ-V4 "                                                                                                                                                              
 echo -e "\e[1;32m            ░█▀▀█ █▀▀ █──█ ▀▀█ ── ░█──░█ ─█▀█─ "                
 echo -e "\e[1;32m            ░█▄▄▀ █▀▀ █▄▄█ ▄▀─ ▀▀ ─░█░█─ █▄▄█▄  "               
 echo -e "\e[1;32m            ░█─░█ ▀▀▀ ▄▄▄█ ▀▀▀ ── ──▀▄▀─ ───█─  "                                                                                  
@@ -21,9 +20,9 @@ echo -e "\e[1;32m           ┌┴─┴─┐-┘─┘       sorry because thi
 echo -e "\e[1;32m           │▒┌──┘▒▒▒│     - Thanks for who using this script "      
 echo -e "\e[1;32m           └┐▒▒▒▒▒▒┌┘     - To EnterMenuList = 'menu' "                                                                                 
 echo -e "\e[1;32m ====================================================================# "
-echo -e "\e[1;32m                         COPYRIGHT © 6/2004 "
-echo -e "\e[1;32m              ReyzVPN POWERED BY GHReyz / Reyz-V4 "
-echo -e "\e[1;32m         Privacy Policy Terms & Conditions Disclaimer "                                                                                                
+echo -e "\e[1;31m                         COPYRIGHT © 6/2004 "
+echo -e "\e[1;31m              ReyzVPN POWERED BY GHReyz / Reyz-V4 "
+echo -e "\e[1;31m         Privacy Policy Terms & Conditions Disclaimer "                                                                                                
 echo -e "\e[93m          .----------------------------------------------------.           "
 echo -e "\e[93m          |             Script status : Premium                |           "
 echo -e "\e[93m          '----------------------------------------------------'           "
