@@ -1,16 +1,16 @@
 #!/bin/bash
 clear
-red='\e[1;35m'
+red='\e[0;35m'
 bred1='\e[47m'
 bred='\e[47m'
 blue='\e[1;34m'
 blue_b='\e[1;94m'
 yellow='\e[1;31m'
-purple='\e[1;33m'
-white='\e[1;37m'
+purple='\e[0;33m'
+white='\e[0;37m'
 try='\e[0;103m'
-cyan='\e[1;36m'
-green='\e[1;35m'
+cyan='\e[0;36m'
+green='\e[0;35m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com)
 IZIN=$(curl https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $MYIP | awk '{print $4}')
