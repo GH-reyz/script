@@ -9,7 +9,6 @@ bash /root/.fontsam/banner
 echo -e " ═════════════════════════════════════════════" 
 echo -e "             ${red}XRAY VLESS GRPC${NC}                     "   
 echo -e " ═════════════════════════════════════════════" 
-echo -e " " 
 echo -e "   [ 1 ] CREATE NEW USER"
 echo -e "   [ 2 ] DELETE ACTIVE USER"
 echo -e "   [ 3 ] EXTEND ACTIVE USER"
