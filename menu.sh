@@ -141,10 +141,10 @@ echo -e   " \e[$line════════════════════
 echo -e   " \e[$back_text                        \e[30m[\e[$box MAIN MENU\e[30m ]\e[1m                            \e[m"
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
 echo -e " \e[$number [  1 ]\e[m \e[$below Panel Ssh & OpenVpn\e[m           \e[$number[  6 ]\e[m \e[$red REBOOT"
-echo -e " \e[$number [  2 ]\e[m \e[$below Panel V2ray Core\e[m              \e[$number[  7 ]\e[m \e[$below Check Service Error\e[m"     
-echo -e " \e[$number [  3 ]\e[m \e[$below Panel Xray Core\e[m               \e[$number[  8 ]\e[m \e[$below System Information\e[m"
-echo -e " \e[$number [  4 ]\e[m \e[$below Panel Trojan Gfw\e[m              \e[$number[  9 ]\e[m \e[$below Menu System Script\e[m"
-echo -e " \e[$number [  5 ]\e[m \e[$below Change Banner Script\e[m          \e[$number[ 10 ]\e[m \e[$below Menu Theme\e[m"
+echo -e " \e[$number [  2 ]\e[m \e[$below Panel Xray Core\e[m               \e[$number[  7 ]\e[m \e[$below Change Password VPS\e[m"     
+echo -e " \e[$number [  3 ]\e[m \e[$below Panel Trojan GFW\e[m              \e[$number[  8 ]\e[m \e[$below System Information\e[m"
+echo -e " \e[$number [  4 ]\e[m \e[$below Change Banner Script\e[m          \e[$number[  9 ]\e[m \e[$below Menu System Script\e[m"
+echo -e " \e[$number [  5 ]\e[m \e[$below Check Service Error\e[m           \e[$number[ 10 ]\e[m \e[$below Menu Theme\e[m"
 echo -e   " \e[$line═════════════════════════════════════════════════════════════════\e[m"
 echo -e " \e[$below Client Name   :\e[m \e[$number $name\e[m"
 echo -e " \e[$below Script Status :\e[m \e[$red $exp\e[m"
@@ -159,22 +159,22 @@ case $menu in
   mssh
   ;;
 2)
-  mv2raycore
-  ;;
-3)
   mxraycore
   ;;
-4)
+3)
   mtrojan
   ;;
-5)
+4)
   banner_changer
+  ;;
+5)
+  checksystem
   ;;
 6)
   reboot
   ;;
 7)
-  checksystem
+  passwd
   ;;
 8)
   info
