@@ -16,7 +16,7 @@ date
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
 # install v2ray
-wget https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/go.sh && chmod +x go.sh && ./go.sh
+wget https://raw.githubusercontent.com/GH-reyz/script/main/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
 bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
 mkdir /root/.acme.sh
@@ -494,25 +494,25 @@ systemctl enable v2ray
 
 cd /usr/bin
 
-wget -O mtrojan "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/mtrojan.sh"
-wget -O mvless "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/mvless.sh"
-wget -O mvmess "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/mvmess.sh"
-wget -O add-ws "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/add-ws.sh"
-wget -O add-vless "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/add-vless.sh"
-wget -O add-tr "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/add-tr.sh"
-wget -O del-ws "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/del-ws.sh"
-wget -O del-vless "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/del-vless.sh"
-wget -O del-tr "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/del-tr.sh"
-wget -O cek-ws "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/cek-ws.sh"
-wget -O cek-vless "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/cek-vless.sh"
-wget -O cek-tr "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/cek-tr.sh"
-wget -O renew-ws "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/renew-ws.sh"
-wget -O renew-vless "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/renew-vless.sh"
-wget -O renew-tr "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/renew-tr.sh"
-wget -O recert-v2ray "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/recert-v2ray.sh"
-wget -O port-ws "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/port-vless.sh"
-wget -O port-tr "https://raw.githubusercontent.com/jinGGo007/GH-reyz/script/main/port-tr.sh"
+wget -O mtrojan "https://raw.githubusercontent.com/GH-reyz/script/main/mtrojan.sh"
+wget -O mvless "https://raw.githubusercontent.com/GH-reyz/script/main/mvless.sh"
+wget -O mvmess "https://raw.githubusercontent.com/GH-reyz/script/main/mvmess.sh"
+wget -O add-ws "https://raw.githubusercontent.com/GH-reyz/script/main/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/GH-reyz/script/main/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/GH-reyz/script/main/add-tr.sh"
+wget -O del-ws "https://raw.githubusercontent.com/GH-reyz/script/main/del-ws.sh"
+wget -O del-vless "https://raw.githubusercontent.com/GH-reyz/script/main/del-vless.sh"
+wget -O del-tr "https://raw.githubusercontent.com/GH-reyz/script/main/del-tr.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/GH-reyz/script/main/cek-ws.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/GH-reyz/script/main/cek-vless.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/GH-reyz/script/main/cek-tr.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/GH-reyz/script/main/renew-ws.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/GH-reyz/script/main/renew-vless.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/GH-reyz/script/main/renew-tr.sh"
+wget -O recert-v2ray "https://raw.githubusercontent.com/GH-reyz/script/main/recert-v2ray.sh"
+wget -O port-ws "https://raw.githubusercontent.com/GH-reyz/script/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/GH-reyz/script/main/port-vless.sh"
+wget -O port-tr "https://raw.githubusercontent.com/GH-reyz/script/main/port-tr.sh"
 chmod +x mtrojan
 chmod +x mvless
 chmod +x mvmess
