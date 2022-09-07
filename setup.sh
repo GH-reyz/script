@@ -109,33 +109,6 @@ wget https://raw.githubusercontent.com/GH-reyz/script/main/ssh-vpn.sh && chmod +
 sleep 2
 clear
 
-#install ssr
-echo -e "============================================="
-echo -e " ${green} INSTALLING SHADOWSOCKS R${NC} "
-echo -e "============================================="
-sleep 2
-wget https://raw.githubusercontent.com/GH-reyz/script/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-sleep 2
-clear
-
-#install ss
-echo -e "============================================="
-echo -e " ${green} INSTALLING SHADOWSOCKS OBFS${NC} "
-echo -e "============================================="
-sleep 2
-wget https://raw.githubusercontent.com/GH-reyz/script/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
-sleep 2
-clear
-
-#install wg
-echo -e "============================================="
-echo -e " ${green} INSTALLING WIREGUARD${NC} "
-echo -e "============================================="
-sleep 2
-wget https://raw.githubusercontent.com/GH-reyz/script/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
-sleep 2
-clear
-
 #install v2ray
 echo -e "============================================="
 echo -e " ${green}  INSTALLING V2RAY${NC} "
@@ -218,10 +191,6 @@ echo "   - Nginx                   : 81"  | tee -a log-install.txt
 echo "   - SSH WS/OVPN WS          : 2082, 2095"  | tee -a log-install.txt
 echo "   - DROPBEAR OHP            : 8010"  | tee -a log-install.txt
 echo "   - OPENVPN OHP             : 8111"  | tee -a log-install.txt
-echo "   - V2RAY Vmess TLS         : 5443"  | tee -a log-install.txt
-echo "   - V2RAY Vmess None TLS    : 6443"  | tee -a log-install.txt
-echo "   - V2RAY Vless TLS         : 7443"  | tee -a log-install.txt
-echo "   - V2RAY Vless None TLS    : 8443"  | tee -a log-install.txt
 echo "   - Trojan                  : 9443"  | tee -a log-install.txt
 echo "   - XRAY VMESS TLS          : 2929"  | tee -a log-install.txt
 echo "   - XRAY VMESS NON TLS      : 3939"  | tee -a log-install.txt
