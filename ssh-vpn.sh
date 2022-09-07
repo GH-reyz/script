@@ -1,8 +1,5 @@
 #!/bin/bash
-# By Ichikaa
-# ==================================================
-#wget https://github.com/${GitUser}/
-GitUser="GH-reyz"
+
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
 MYIP=$(wget -qO- icanhazip.com);
@@ -12,16 +9,16 @@ source /etc/os-release
 ver=$VERSION_ID
 
 #detail nama perusahaan
-country="MY"
-state="Kt"
-locality="ganu"
-organization="GH-reyz"
-organizationalunit="GH-reyz"
-commonname="GH-reyz"
-email="muhammadzamri150@gmail.com"
+country=MY
+state=Malaysia
+locality=Ganu
+organization=REYZVPN
+organizationalunit=REYZVPN
+commonname=REYZVPN
+email=muhammadzamri150@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/GH-reyz/script/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -73,29 +70,29 @@ apt-get remove --purge exim4 -y
 apt -y install wget curl
 
 # set time GMT +8
-ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
+ln -sf /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
 
 # set locale
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 
 # install
-apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
+apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl git lsof
 echo "clear" >> .profile
-echo "menu" >> .profile
+echo "jinggo" >> .profile
 
 # install webserver
 apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/GH-reyz/script/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/GH-reyz/script/main/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/GH-reyz/script/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -110,33 +107,22 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7700 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 
-apt-get -y update
 # setting port ssh
-cd
-sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g'
-# /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 500' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 40000' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 51443' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 58080' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 200' /etc/ssh/sshd_config
-sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
-/etc/init.d/ssh restart
+sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 
 # install dropbear
 apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=442/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 69"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
 
-# install squid for debian 9,10 & ubuntu 20.04
+# install squid
+cd
 apt -y install squid3
-# install squid for debian 11
-apt -y install squid
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/GH-reyz/script/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -166,20 +152,16 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [dropbear]
-accept = 222
+accept = 444
 connect = 127.0.0.1:109
 
 [dropbear]
 accept = 777
-connect = 127.0.0.1:442
+connect = 127.0.0.1:22
 
 [openvpn]
-accept = 110
+accept = 442
 connect = 127.0.0.1:1194
-
-[ws-stunnel]
-accept = 2082
-connect = 443
 
 END
 
@@ -191,58 +173,56 @@ cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
 
 # konfigurasi stunnel
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
-/lib/systemd/systemd-sysv-install enable stunnel4
-systemctl start stunnel4
 /etc/init.d/stunnel4 restart
 
-#OpenVPN
-wget https://raw.githubusercontent.com/${GitUser}/scriptv3/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+#sshws
+apt -y install python
+apt -y install tmux
+apt -y install ruby
+gem install lolcat
+apt -y install figlet
+wget -q https://raw.githubusercontent.com/GH-reyz/script/main/edu.sh && chmod +x edu.sh && ./edu.sh
 
-# install lolcat
-wget https://raw.githubusercontent.com/${GitUser}/scriptv3/main/lolcat.sh &&  chmod +x lolcat.sh && ./lolcat.sh
+#OpenVPN
+wget https://raw.githubusercontent.com/GH-reyz/script/main/vpn.sh && chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
 
-# Instal DDOS Flate
-if [ -d '/usr/local/ddos' ]; then
-	echo; echo; echo "Please un-install the previous version first"
-	exit 0
-else
-	mkdir /usr/local/ddos
-fi
-clear
+#install ddos
 echo; echo 'Installing DOS-Deflate 0.6'; echo
 echo; echo -n 'Downloading source files...'
-wget -q -O /usr/local/ddos/ddos.conf http://www.inetbase.com/scripts/ddos/ddos.conf
+wget -q -O /usr/local/ddos/ddos.conf http://www.ctohome.com/linux-vps-pack/soft/ddos/ddos.conf
 echo -n '.'
 wget -q -O /usr/local/ddos/LICENSE http://www.inetbase.com/scripts/ddos/LICENSE
 echo -n '.'
-wget -q -O /usr/local/ddos/ignore.ip.list http://www.inetbase.com/scripts/ddos/ignore.ip.list
+wget -q -O /usr/local/ddos/ignore.ip.list http://www.ctohome.com/linux-vps-pack/soft/ddos/ignore.ip.list
+
+/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:" >>  /usr/local/ddos/ignore.ip.list;
+chattr +i /usr/local/ddos/ignore.ip.list;
+
 echo -n '.'
-wget -q -O /usr/local/ddos/ddos.sh http://www.inetbase.com/scripts/ddos/ddos.sh
+wget -q -O /usr/local/ddos/ddos.sh http://www.ctohome.com/linux-vps-pack/soft/ddos/ddos-deflate.sh
 chmod 0755 /usr/local/ddos/ddos.sh
 cp -s /usr/local/ddos/ddos.sh /usr/local/sbin/ddos
 echo '...done'
+
 echo; echo -n 'Creating cron to run script every minute.....(Default setting)'
 /usr/local/ddos/ddos.sh --cron > /dev/null 2>&1
 echo '.....done'
-echo; echo 'Installation has completed.'
+echo; echo 'DOS-Deflate Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
-echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
+
+service iptables restart
+
+clear
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/banner/bannerssh.conf"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/GH-reyz/script/main/issue.net"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
-#Bannerku menu
-wget -O /usr/bin/bannerku https://raw.githubusercontent.com/${GitUser}/scriptv3/main/banner/bannerku && chmod +x /usr/bin/bannerku
-
-#install bbr
-wget https://raw.githubusercontent.com/${GitUser}/scriptv3/main/system/bbr.sh && chmod +x bbr.sh && ./bbr.sh
-
-# blockir torrent
+# block torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
 iptables -A FORWARD -m string --string "announce_peer" --algo bm -j DROP
 iptables -A FORWARD -m string --string "find_node" --algo bm -j DROP
@@ -259,100 +239,78 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 
-# download script
+# download script menu
+echo -e "============================================="
+echo -e " ${green} DOWNLOAD MENU SCRIPT ${NC}"
+echo -e "============================================="
+sleep 2
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/system/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/system/about.sh"
-wget -O menu "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/menu.sh"
-wget -O add-ssh "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/add-user/add-ssh.sh"
-wget -O trial "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/add-user/trial.sh"
-wget -O del-ssh "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/delete-user/del-ssh.sh"
-wget -O member "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/member.sh"
-wget -O delete "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/delete-user/delete.sh"
-wget -O cek-ssh "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/cek-user/cek-ssh.sh"
-wget -O restart "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/system/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/system/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/system/info.sh"
-wget -O ram "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/system/ram.sh"
-wget -O renew-ssh "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/renew-user/renew-ssh.sh"
-wget -O autokill "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/cek-user/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/clear-log.sh"
-wget -O change-port "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/change-port/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/change-port/port-ssl.sh"
-wget -O port-squid "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/change-port/port-squid.sh"
-wget -O port-websocket "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/change-port/port-websocket.sh"
-wget -O wbmn "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/xp.sh"
-wget -O kernel-updt "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/kernel.sh"
-wget -O user-list "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/more-option/user-list.sh"
-wget -O user-lock "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/more-option/user-lock.sh"
-wget -O user-unlock "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/more-option/user-unlock.sh"
-wget -O user-password "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/more-option/user-password.sh"
-wget -O antitorrent "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/more-option/antitorrent.sh"
-wget -O cfa "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/cloud/cfa.sh"
-wget -O cfd "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/cloud/cfd.sh"
-wget -O cfp "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/cloud/cfp.sh"
-wget -O swap "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/swapkvm.sh"
-wget -O check-sc "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/system/running.sh"
-wget -O ssh "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/menu/ssh.sh"
-wget -O autoreboot "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/system/autoreboot.sh"
-wget -O bbr "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/system/bbr.sh"
-wget -O port-ohp "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/change-port/port-ohp.sh"
-wget -O port-xray "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/change-port/port-xray.sh"
-wget -O panel-domain "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/menu/panel-domain.sh"
-wget -O system "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/menu/system.sh"
-wget -O themes "https://raw.githubusercontent.com/${GitUser}/scriptv3/main/menu/themes.sh"
-chmod +x add-host
+wget -O mssh "https://raw.githubusercontent.com/GH-reyz/script/main/mssh.sh"
+wget -O menu "https://raw.githubusercontent.com/GH-reyz/script/main/menu.sh"
+wget -O add-host "https://raw.githubusercontent.com/GH-reyz/script/main/add-host.sh"
+wget -O usernew "https://raw.githubusercontent.com/GH-reyz/script/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/GH-reyz/script/main/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/GH-reyz/script/main/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/GH-reyz/script/main/member.sh"
+wget -O delete "https://raw.githubusercontent.com/GH-reyz/script/main/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/GH-reyz/script/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/GH-reyz/script/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/GH-reyz/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/GH-reyz/script/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/GH-reyz/script/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/GH-reyz/script/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/GH-reyz/script/main/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/GH-reyz/script/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/GH-reyz/script/main/tendang.sh"
+wget -O change "https://raw.githubusercontent.com/GH-reyz/script/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/GH-reyz/script/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/GH-reyz/script/main/port-ssl.sh"
+wget -O port-squid "https://raw.githubusercontent.com/GH-reyz/script/main/port-squid.sh"
+wget -O wbmn "https://raw.githubusercontent.com/GH-reyz/script/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/GH-reyz/script/main/xp.sh"
+wget -O checksystem "https://raw.githubusercontent.com/GH-reyz/script/main/checksystem.sh"
+wget -O jinggo "https://raw.githubusercontent.com/GH-reyz/script/main/jinggo.sh"
+wget -O mdns "https://raw.githubusercontent.com/GH-reyz/script/main/mdns.sh"
+wget -O nf "https://raw.githubusercontent.com/GH-reyz/script/main/nf.sh"
+wget -O update "https://raw.githubusercontent.com/GH-reyz/script/main/update.sh"
+wget -O system "https://raw.githubusercontent.com/GH-reyz/script/main/system.sh"
+wget -O themes "https://raw.githubusercontent.com/GH-reyz/script/main/themes.sh"
+wget -O lolcat "https://raw.githubusercontent.com/GH-reyz/script/main/lolcat.sh"
+chmod +x mssh
 chmod +x menu
-chmod +x add-ssh
+chmod +x add-host
+chmod +x usernew
 chmod +x trial
-chmod +x del-ssh
+chmod +x hapus
 chmod +x member
 chmod +x delete
-chmod +x cek-ssh
+chmod +x cek
 chmod +x restart
 chmod +x speedtest
 chmod +x info
-chmod +x about
 chmod +x autokill
 chmod +x tendang
 chmod +x ceklim
 chmod +x ram
-chmod +x renew-ssh
+chmod +x renew
 chmod +x clear-log
-chmod +x change-port
-chmod +x restore
+chmod +x change
 chmod +x port-ovpn
 chmod +x port-ssl
 chmod +x port-squid
-chmod +x port-websocket
 chmod +x wbmn
 chmod +x xp
-chmod +x kernel-updt
-chmod +x user-list
-chmod +x user-lock
-chmod +x user-unlock
-chmod +x user-password
-chmod +x antitorrent
-chmod +x cfa
-chmod +x cfd
-chmod +x cfp
-chmod +x swap
-chmod +x check-sc
-chmod +x ssh
-chmod +x autoreboot
-chmod +x bbr
-chmod +x port-ohp
-chmod +x port-xray
-chmod +x panel-domain
+chmod +x checksystem
+chmod +x jinggo
+chmod +x mdns
+chmod +x nf
+chmod +x update
 chmod +x system
 chmod +x themes
+chmod +x lolcat
+sed -i -e 's/\r$//' system
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
-echo "0 0 * * * root delete" >> /etc/crontab
 # remove unnecessary files
 cd
 apt autoclean -y
@@ -371,8 +329,8 @@ chown -R www-data:www-data /home/vps/public_html
 /etc/init.d/ssh restart
 /etc/init.d/dropbear restart
 /etc/init.d/fail2ban restart
-/etc/init.d/vnstat restart
 /etc/init.d/stunnel4 restart
+/etc/init.d/vnstat restart
 /etc/init.d/squid restart
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
