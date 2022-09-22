@@ -15,6 +15,7 @@ OVPN / SSH / XRAY / TROJAN
 ![Nginx](https://shields.io/badge/Service-Nginx-orange?logo=onnx&style=for-the-badge)
 
 Salam. Ini merupakan sebuah script yang memudahkan para seller VPN untuk install package-package yang diperlukan untuk berjualan VPN.
+#Script Preview
 
 
 ### Features:
