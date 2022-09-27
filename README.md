@@ -1,6 +1,6 @@
 
 # Autoscript VPS By Reyz-V4 (Ubuntu 18-20/Debian 10)
-OVPN / SSH / XRAY / TROJAN (SinglePort) ni
+OVPN / SSH / XRAY / TROJAN (SinglePort) 
 
 ![OS](https://shields.io/badge/OS-Ubuntu%2018+-green?logo=ubuntu&style=for-the-badge) 
 ![OS](https://shields.io/badge/OS-Debian%2010+-green?logo=debian&style=for-the-badge)
